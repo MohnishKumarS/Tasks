@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</head>
+<style>
+
+  
+    .calculator {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 70px;
+        grid-gap: 25px;
+        background-image: linear-gradient(to bottom right, rgb(158, 227, 184), rgb(240, 240, 112));
+        
+       
+      
+
+    }
+
+    .output {
+        grid-column: span 4;
+
+    }
+
+    .equal {
+        grid-column: 3/5;
+    }
+/* 
+    input {
+        box-shadow: 10px 5px 30px rgb(162, 160, 167),
+            -5px -10px 50px rgb(253, 239, 239);
+
+    } */
+</style>
+
+<body>
+
+    <h1 class="bg-warning p-4 text-center fw-bold">Calculator</h1>
+
+    <div class="container">
+
+        <div class="calculator  p-5 rounded-5 m-5">
+
+            <input type="text" placeholder="0" class="output border border-dark border-2 rounded-2  text-dark fs-2 fw-bold text-end"
+                id="output-screen">
+            <button class="btn btn-secondary rounded-pill fw-bold fs-3 " onclick="clears()">clear</button>
+            <button class="btn btn-danger rounded-pill fw-bold fs-3 "  onclick="deleted()">delete</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('%')">%</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('+')">+</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('-')">-</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('*')">*</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('/')">/</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('9')">9</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('8')">8</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('7')">7</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('6')">6</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('5')">5</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('4')">4</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('3')">3</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('2')">2</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('1')">1</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('0')">0</button>
+            <button class="btn btn-primary rounded-pill fw-bold fs-3 " onclick="display('.')">.</button>
+            <button class="btn btn-success rounded-pill fw-bold fs-3 equal" onclick="equal()">=</button>
+
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        var outputs = document.getElementById('output-screen');
+
+        function display(num) {
+            outputs.value += num;
+
+        };
+
+        function equal() {
+            try {
+                outputs.value = eval(outputs.value);
+            } catch (err) {
+                alert('invalid');
+            }
+
+        }
+
+        function clears() {
+            // alert('df');
+            outputs.value = "";
+        }
+
+        function deleted() {
+            // alert('hii');
+            outputs.value = outputs.value.slice(0,-1);
+        }
+    </script>
+
+</body>
+
+</html>

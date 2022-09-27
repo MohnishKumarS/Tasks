@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo-list</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(240, 234, 234);
+        }
+        .boox{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(196, 232, 178);
+            padding: 100px;
+            /* width: 100%; */
+        }
+        .inputField{
+            /* outline: none; */
+            /* border: none; */
+            padding: 8px 50px;
+        }
+        ul li {
+            border: 2px solid rgb(7, 7, 7);
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px 0px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div class="container"> 
+
+        <div class="boox">
+            <h1 class="text-center ">Todo-List</h1>
+
+            <div class="mt-3">
+                <input type="text" class="inputField" id="inputField">
+                <button class="btn btn-primary btn-lg rounded-pill text-center mb-1" id="button" type="button">+</button>
+            </div>
+ 
+            <ul id="todos" class="list-group">
+              
+
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        let button = document.getElementById("button");
+        let inputField =document.getElementById("inputField");
+        let todos = document.getElementById("todos");
+       
+      
+        button.addEventListener("click",() => {
+            // alert("hii");
+
+          
+            
+                if(inputField.value == "" ){
+                    alert('Please enter some value');
+                }else{
+                    // inputField.value;
+                    addtodo( inputField.value)
+                     
+                }         
+
+        });
+
+        
+         addtodo = (a) => {
+                    // alert(a);
+                    let add = ` <li class="d-flex justify-content-between align-items-center fs-3"><span>${inputField.value}</span> <i class="fa fa-trash-o delete text-danger fs-2"></i> </li>`;
+                    todos.innerHTML += add ;
+                    inputField.value = "" ;
+                    // todos.appendChild(add);
+                }
+
+         todos.addEventListener('click',(e) => {
+
+            if(e.target.classList.contains('delete')){
+                e.target.parentElement.remove();
+            }
+         })       
+
+
+          
+
+    </script>
+    
+</body>
+</html>
