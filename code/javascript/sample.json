@@ -1,0 +1,98 @@
+{
+    "moreOptions":{
+        "serviceActions":[
+            {
+                "name" :"Poweron",
+                "desc" :"Poweron is the server function",
+                "img" :"power-on.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Power Off",
+                "desc" :"Poweron is the server function",
+                "img" :"power-off.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Shut Down",
+                "desc" :"Shut Down is the server function",
+                "img" :"shut-down.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Reboot",
+                "desc" :"Reboot is the server function",
+                "img" :"reboot.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Reset Password",
+                "desc" :"Reset Password is the server function",
+                "img" :"reset.png",
+                "request" :"/api"
+             }
+        ],
+        "serviceManagement":[
+            {
+                "name" :"Backups",
+                "desc" :"Backups is the server function",
+                "img" :"backup.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Console",
+                "desc" :"Console is the server function",
+                "img" :"console.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Firewalls",
+                "desc" :"Firewalls is the server function",
+                "img" :"firewall.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Floating IP Addresses",
+                "desc" :"Floating IP Addresses is the server function",
+                "img" :"ip.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Graph",
+                "desc" :"Graph is the server function",
+                "img" :"graph.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"ISO Images",
+                "desc" :"ISO Images is the server function",
+                "img" :"iso.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Networks",
+                "desc" :"Networks is the server function",
+                "img" :"networks.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Rebuild",
+                "desc" :"Rebuild is the server function",
+                "img" :"recovery.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Reverse DNS",
+                "desc" :"Reverse DNS is the server function",
+                "img" :"dns.png",
+                "request" :"/api"
+             },
+            {
+                "name" :"Snapshots",
+                "desc" :"Snapshots is the server function",
+                "img" :"snapshot.png",
+                "request" :"/api"
+             }
+        ]
+    }
+}

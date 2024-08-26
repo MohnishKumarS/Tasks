@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  .wavy-border {
+    margin-top: 20px;
+    position: relative;
+    width: 100px;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: #000;
+  border: 5px solid red; */
+  }
+
+  .wavy-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 2px solid #000;
+    /* Color of the wavy border */
+    border-radius: 10px;
+    transform: scaleY(2) translateX(-50%);
+  }
+
+  .wavy-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 2px solid #000;
+    /* Color of the wavy border */
+    border-radius: 10px;
+    transform: scaleY(2) translateX(50%);
+  }
+</style>
+
+<body>
+  <svg class="nav-icon" width="25" height="18" viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+    <rect width="25" height="2" />
+    <rect y="8" width="20" height="2" />
+    <rect y="16" width="25" height="2" />
+  </svg>
+  <script data-ha="js/ha">
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.referrerPolicy = 'no-referrer-when-downgrade';
+    s.src = 'https://www.thewebhostingdir.com/twhdir-ha.js?' + new Date().getTime();
+    document.getElementsByTagName('head')[0].appendChild(s);
+  </script>
+  <!-- <div class="wavy-border">asddddddddddd</div> -->
+
+  <script>
+    //   function Car(make, model) {
+    //   this.make = make;
+    //   this.model = model;
+    //     console.log(this);
+    //   var displayInfo = function() {
+    //     console.log(`Make: ${this.make}, Model: ${this.model}`); // 'this' does not refer to the Car instance
+    //   }
+
+    //    this.showMake = function() {
+    //     console.log(`Make: ${this.make}`); // 'this' refers to the global object or undefined
+    //   }
+
+    // }
+
+    // const myCar = new Car('Toyota', 'Corolla');
+    // myCar.showMake();
+
+
+    class Car {
+      constructor(make, model) {
+        this.make = make;
+        this.model = model;
+      }
+
+      displayInfo(name) {
+        console.log(`Make: ${this.make}, Model: ${this}`);
+      }
+
+      showMake = () => {
+        console.log(`Make: ${this.make}`);
+      }
+
+      display() {
+        this.displayInfo(); // Call the displayInfo method
+        this.showMake(); // Call the showMake method
+      }
+    }
+
+    const myCar = new Car('Toyota', 'Corolla');
+    myCar.display();
+
+    // function displayInfo(name) {
+    //   this.name = name;
+    //   this.namef = function(){
+    //     console.log('moni function');
+    //     return true;
+    //   }
+    //   // console.log(this);
+    //   // console.log(name);
+    // }
+
+
+    // const lee = new displayInfo('moni');
+    // console.log(lee.namef());
+
+
+    let add = new Set();
+    add.add('moni');
+
+    // console.log(add);
+  </script>
+
+
+
+  <script>
+    // JavaScript function to toggle text visibility
+    // function toggleText() {
+
+
+    const aa = 'moni';
+    const bb = 'lee';
+    const cc = 'leela';
+
+    // if(aa == 'moni' && (bb == 'lees' || cc == 'leela') ){
+    //   console.log(true);
+    // }else{
+    //   console.log(false);
+    // }
+
+    // if (aa !== 'moni') {
+    //   console.log('lee');
+    // }else{
+    //   console.log('moni');
+    // }
+
+
+    // }
+  </script>
+  <style>
+    .c-panel_graph {
+      width: 1200px;
+      margin: auto;
+      padding: 100px 0;
+    }
+  </style>
+  <div>
+    <h2 class="c-panel-des__title sec-title center">Graph</h2>
+    <!-- <div class="c-panel_graph">
+      <canvas id="myChart_cpu"></canvas>
+    </div> -->
+    <div class="c-panel_graph ">
+      <canvas id="myChart_memory_io"></canvas>
+    </div>
+    <!-- <div class="c-panel_graph">
+      <canvas id="myChart_memory_usage"></canvas>
+    </div>
+    <div class="c-panel_graph">
+      <canvas id="myChart_net_traffic"></canvas>
+    </div> -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    (async () => {
+      try {
+        const FILE_URL = 'response.json';
+        const response = await fetch(FILE_URL);
+        if (response.status >= 200 && response.status < 300) {
+          const data = await response.json();
+          if (data.length > 0) {
+            displayGraph(data);
+          }
+        } else {
+          throw new Error('response error status ' + response.statusText)
+        }
+      } catch (error) {
+        console.error('something went wrong in fetching json data ' + error.message);
+      }
+    })();
+
+    function displayGraph(data) {
+      // Filter out inner arrays where both elements are equal to 0 or null
+      let filteredData = data.filter(innerArr => innerArr[0] !== 0 && innerArr[1] !== 0 && innerArr[0] !== null &&
+        innerArr[1] !== null);
+      // console.log(filteredData);
+      let getViewDate = filteredData.map(function (arr) {
+
+        var date = new Date(arr[0] * 1000);
+        var dateTimeFormatter = new Intl.DateTimeFormat('en-US', {
+
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          timeZone: 'UTC' // Optional: specify the time zone
+        });
+
+        // Format the date using the Intl.DateTimeFormat object
+        var formattedDate = dateTimeFormatter.format(date);
+        return formattedDate;
+      })
+      console.log(getViewDate);
+
+      let getDateTime = [];
+      let getMilliSec = [];
+      filteredData.forEach(ele => {
+        getDateTime.push(ele[0]);
+        getMilliSec.push(ele[1]);
+      });
+      // console.log(getMilliSec);
+      const myChart_memory_io = document.getElementById("myChart_memory_io");
+
+      new Chart(myChart_memory_io, {
+        type: "line",
+        data: {
+          labels: getViewDate,
+          datasets: [{
+            label: "# of ms",
+            data: getMilliSec,
+            borderWidth: 1,
+            backgroundColor: [
+              "rgb(66,211,245)",
+              "red",
+              "green",
+              "blue",
+              "yellow",
+              "black",
+            ],
+          }, ],
+        },
+        options: {
+          plugins: {
+            animations: {
+              tension: {
+                duration: 1000,
+                easing: "linear",
+                from: 1,
+                to: 0,
+                loop: true,
+              },
+            },
+            scales: {
+              y: {
+                // defining min and max so hiding the dataset does not change scale range
+                min: 0,
+                max: 100,
+              },
+            },
+            customCanvasBackgroundColor: {
+              color: 'lightGreen',
+            },
+            legend: {
+              display: true,
+            },
+            title: {
+              display: true,
+              text: "Memory IO Operations Usage",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: 0,
+            },
+          },
+        },
+
+      });
+    }
+  </script>
+
+
+  <script>
+    //     const myChart_cpu = document.getElementById("myChart_cpu");
+
+    // new Chart(myChart_cpu, {
+    //   type: "bar",
+    //   data: {
+    //     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    //     datasets: [{
+    //       label: "# of CPU usage",
+    //       data: [23, 19, 13, 5, 8, 3],
+    //       borderWidth: 1,
+    //       backgroundColor: [
+    //         "rgb(66,211,245)",
+    //         "red",
+    //         "green",
+    //         "blue",
+    //         "yellow",
+    //         "black",
+    //       ],
+    //     }, ],
+    //   },
+    //   options: {
+    //     plugins: {
+    //       legend: {
+    //         display: true,
+    //       },
+    //       title: {
+    //         display: true,
+    //         text: "CPU Usage",
+    //       },
+    //     },
+    //     scales: {
+    //       y: {
+    //         beginAtZero: 0,
+    //       },
+    //     },
+    //   },
+    // });
+
+    //     const myChart_memory_usage = document.getElementById(
+    //       "myChart_memory_usage"
+    //     );
+
+    //     new Chart(myChart_memory_usage, {
+    //       type: "scatter",
+    //       data: {
+    //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    //         datasets: [{
+    //             type: "line",
+    //             label: "Bar Dataset",
+    //             data: [10, 20, 30, 40, 22, 13],
+    //             borderColor: "rgb(255, 99, 132)",
+    //             backgroundColor: "rgba(255, 99, 132, 0.2)",
+    //           },
+    //           {
+    //             type: "line",
+    //             label: "Line Dataset",
+    //             data: [10, 20, 13, 30, 34, 21],
+    //             fill: false,
+    //             borderColor: "rgb(54, 162, 235)",
+    //           },
+    //         ],
+    //       },
+    //       options: {
+    //         plugins: {
+    //           legend: {
+    //             display: true,
+    //           },
+    //           title: {
+    //             display: true,
+    //             text: "Memory  Usage",
+    //           },
+    //         },
+    //         scales: {
+    //           y: {
+    //             beginAtZero: 0,
+    //           },
+    //         },
+    //       },
+    //     });
+
+    //     const myChart_net_traffic = document.getElementById(
+    //       "myChart_net_traffic"
+    //     );
+
+    //     new Chart(myChart_net_traffic, {
+    //       type: "scatter",
+    //       data: {
+    //         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    //         datasets: [{
+    //             type: "line",
+    //             label: "Bar Dataset",
+    //             data: [10, 20, 30, 40, 22, 13],
+    //             borderColor: "rgb(255, 99, 132)",
+    //             backgroundColor: "rgba(255, 99, 132, 0.2)",
+    //           },
+    //           {
+    //             type: "line",
+    //             label: "Line Dataset",
+    //             data: [10, 20, 13, 30, 34, 21],
+    //             fill: false,
+    //             borderColor: "rgb(54, 162, 235)",
+    //           },
+    //         ],
+    //       },
+    //       options: {
+    //         plugins: {
+    //           legend: {
+    //             display: true,
+    //           },
+    //           title: {
+    //             display: true,
+    //             text: "Network Package Traffic",
+    //           },
+    //         },
+    //         scales: {
+    //           y: {
+    //             beginAtZero: 0,
+    //           },
+    //         },
+    //       },
+    //     });
+  </script>
+
+</body>
+
+</html>

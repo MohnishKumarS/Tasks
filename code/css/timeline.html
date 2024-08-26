@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+      try {
+        // var x= 'as';
+      // console.log(x/0); // ReferenceError: x is not defined
+    } catch (error) {
+      console.error(error); 
+    }
+    var a = [1,2];
+    var b = [3,4];
+    // console.log(a+b);
+
+    var a = 'B' + 'a' + +'a' + "a";
+    // console.log(typeof NaN);
+
+    var a = [1,2,9,5];
+    var b = [1,2,5,9];
+    const   c = 2;
+    const d = 2.0;
+    
+        console.log(c===d);
+        console.log(typeof d);
+    // console.log(JSON.stringify(a));
+
+
+    var n= 5;
+
+
+
+
+  // for (let i =1 ; i <= n; i++) {
+    
+  //   for (let j =i ; j <= n; j++) {
+  //     document.writeln("&nbsp; ")
+  //   }
+  //   for (let j =1 ; j <= i; j++) {
+  //     document.writeln("* ")
+  //   
+  //   for (let j =1 ; j < i; j++) {
+  //     document.writeln("* ")
+  //   }
+  //   document.writeln("<br> ")
+  // }
+
+  // for (let i =1 ; i <=n ; i++) {
+    
+  //   for (let j =1 ; j <= n+1-i; j++) {
+  //     document.writeln(j)
+  //   }
+  //   document.writeln("<br>")
+  // }
+
+
+
+
+  </script>
+    <style>
+      pre {
+          white-space: pre-wrap;
+      }
+  </style>
+
+  <script>
+    document.write("<pre>");
+      for (let i =1 ; i <=n ; i++) {
+    
+    for (let j =1 ; j <= n; j++) {
+  
+      if (i === 1 || i === n || j === 1 || j === n) {
+                document.write("*");
+            } else {
+                document.write(" ");
+            }
+      
+    }
+    document.writeln("<br>")
+  }
+
+
+
+  </script>
+</body>
+</html>

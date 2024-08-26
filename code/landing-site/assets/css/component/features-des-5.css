@@ -1,0 +1,83 @@
+.features-des-5 {
+  padding-bottom: 50px;
+}
+
+.features-des-5 .features-des-5__title {
+  margin-bottom: 50px;
+}
+
+.features-des-5 .features-des-5__items {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item {
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: 31%;
+  width: calc((100% / 3) - 17px);
+  margin-right: 25px;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .features-des-5 .features-des-5__items .features-des-5__item {
+    width: 47%;
+    width: calc((100% / 2) - 13px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .features-des-5 .features-des-5__items .features-des-5__item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .features-des-5 .features-des-5__items .features-des-5__item:nth-of-type(3n) {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .features-des-5 .features-des-5__items .features-des-5__item:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .features-des-5 .features-des-5__items .features-des-5__item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item .features-des-5__img-wrapper {
+  margin-right: 15px;
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item .features-des-5__img-wrapper .features-des-5__img {
+  width: 100px;
+  height: auto;
+}
+
+@media only screen and (max-width: 479px) {
+  .features-des-5 .features-des-5__items .features-des-5__item .features-des-5__img-wrapper .features-des-5__img {
+    width: 56px;
+  }
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item .features-des-5__item-content .features-des-5__txt {
+  margin-bottom: 0;
+}
+
+.features-des-5 .features-des-5__items .features-des-5__item .features-des-5__item-content .features-des-5__txt a {
+  text-decoration: underline;
+}

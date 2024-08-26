@@ -1,0 +1,110 @@
+    /*  featured des 3  */
+    .featured-des-3 {
+      padding: 100px 0;
+
+      & .featured-des-3__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 50px;
+
+        & .featured-des-3__item {
+          width: calc(100% * (1/2) - 40px);
+          margin: 0 20px;
+          border-radius: 5px;
+          display: flex;
+
+          text-align: start;
+          transition: all 0.2s ease;
+          cursor: pointer;
+
+          & .featured-des-3__icon {
+            position: relative;
+            border: 5px solid #ffc4c4;
+            border-radius: 10px;
+            padding: 10px;
+            height: fit-content;
+            transform: scale(.84) translateX(15%) rotateZ(-11deg);
+            transform-origin: 0 100%;
+            transition: transform 0.4s ease-out;
+
+            & .featured-des-3__img {
+              width: 120px;
+              height: auto;
+              object-fit: cover;
+              transform: scale(0.9) rotateZ(11deg);
+              transition: transform 0.2s ease-out;
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: -22%;
+              left: -46%;
+              width: 200px;
+              height: 20px;
+              background: url('../../image/common/dark.png') no-repeat center;
+              background-size: 100% auto;
+              transform: rotateZ(10deg);
+              opacity: 1;
+              transition: opacity 0.3s ease;
+            }
+          }
+
+          & .featured-des-3__content {
+            padding-left: 15px;
+
+            & .featured-des-3__head {
+              font-size: calc(15px + .7vw);
+              font-weight: 600;
+              padding: 10px 0;
+              color: #333;
+            }
+
+            & .featured-des-3__desc {
+              font-size: 1rem;
+              line-height: 1.8;
+            }
+
+          }
+
+
+
+          &:hover {
+            & .featured-des-3__icon {
+              transform: scale(.84) translateX(15%) rotateZ(0deg);
+
+              &::before {
+                opacity: 0;
+              }
+            }
+
+            & .featured-des-3__img {
+              transform: scale(1) rotateZ(0deg);
+            }
+          }
+
+        }
+      }
+
+
+      @media only screen and (max-width:992px) {
+        & .featured-des-3__items .featured-des-3__item {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      @media only screen and (max-width:768px) {
+        & .featured-des-3__icon::before {
+          bottom: -37% !important;
+          left: -70% !important;
+          width: 160px !important;
+        }
+
+        & .featured-des-3__img {
+          width: 60px !important;
+        }
+      }
+    }
+    /*  END featured des 3  */

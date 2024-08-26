@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--
+	24 News by FreeHTML5.co
+	Twitter: https://twitter.com/fh5co
+	Facebook: https://fb.com/fh5co
+	URL: https://freehtml5.co
+-->
+<html lang="en" class="no-js">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>24-Hour News Hub: Stay Informed with Breaking Headlines </title>
+
+    <meta name="title" content="24-Hour News Hub: Stay Informed with Breaking Headlines">
+    <meta name="description" content="24-Hour News Hub: Stay Informed with Breaking Headlines">
+    <meta name="keywords" content="24-hour news,
+    Breaking news,
+    Global news,
+    Headlines,
+    Current events,
+    News updates,
+    World affairs,
+    Politics,
+    Business news,
+    Technology news,
+    Entertainment news,
+    Sports updates,
+    Journalism,
+    Media outlet,
+    News analysis,
+    News website">
+
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <link href="css/media_query.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link href="css/style_1.css" rel="stylesheet" type="text/css" />
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+    <!-- -- PRELOADER PAGE ---- -->
+    <div class="preloading">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <style>
+        .preloading {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            display: grid;
+            place-items: center;
+            background-color: #fff;
+            z-index: 1000;
+        }
+
+        .loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #f5bc03;
+  width: 3px;
+  height: 24px;
+  transform: translateX(-50%);
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+   
+
+        .ads-post {
+            position: sticky;
+            top: 10px;
+            z-index: 1;
+        }
+
+        .search-box {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+
+        .input-search {
+            height: 50px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            outline: none;
+            border-radius: 25px;
+            transition: all .5s ease-in-out;
+            background-color: #f5bc04;
+            padding-right: 40px;
+            color: #000;
+        }
+
+        .input-search::placeholder {
+            color: rgba(2, 1, 1, 0.5);
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+        }
+
+        .btn-search {
+            width: 50px;
+            height: 50px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color: #000;
+            background-color: transparent;
+            pointer-events: painted;
+        }
+
+        .btn-search:focus~.input-search,.btn-search:active~.input-search {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+
+        .input-search:focus,
+        .input-search:not(:placeholder-shown) {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+    </style>
+    <div class="container-fluid fh5co_header_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 fh5co_mediya_center"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;<span
+                        class="cur_date"></span>
+                    <div class="d-inline-block fh5co_trading_posotion_relative"><a href="#general"
+                            class="treding_btn general">Trending</a>
+                        <div class="fh5co_treding_position_absolute"></div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=vXmjhZcTt_I" class="color_fff fh5co_mediya_setting"
+                        target="_blank">SpaceX rocket blasts US-Russian crew towards space station</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 fh5co_padding_menu">
+                    <img src="images/logo.png" alt="img" class="fh5co_logo_width" />
+                </div>
+                <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
+                    <div class="search-box text-center d-inline-block">
+                        <button class="btn-search"><i class="fa fa-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                    </div>
+                    <!-- <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div>
+                        </a>
+                    </div> -->
+                    <!-- <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a href="https://twitter.com/" target="_blank" class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                        </a>
+                    </div>
+                    <div class="text-center d-inline-block">
+                        <a href="https://fb.com/" target="_blank" class="fh5co_display_table">
+                            <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                        </a>
+                    </div> -->
+                    <!--<div class="d-inline-block text-center"><img src="images/country.png" alt="img" class="fh5co_country_width"/></div>-->
+                    <!-- <div class="d-inline-block text-center dd_position_relative ">
+                        <select class="form-control fh5co_text_select_option">
+                            <option>English </option>
+                            <option>French </option>
+                            <option>German </option>
+                            <option>Spanish </option>
+                        </select>
+                    </div> -->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
+        <div class="container padding_786">
+            <nav class="navbar navbar-toggleable-sm navbar-light ">
+                <button class="navbar-toggler navbar-toggler-right mt-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="mobile_logo_width" /></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url " href="index.html">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url business" href="#business">Business <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url sports" href="#sports">Sports <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url tech" href="#tech">Tech <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url health" href="#health">Health <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url science" href="#science">Science <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-url entertainment" href="#entertainment">Entertainment <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">World <span
+                                    class="sr-only">(current)</span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink_1">
+                                <a class="dropdown-item us-news" href="#us-news">US News</a>
+                                <a class="dropdown-item china-news" href="#china-news">China News</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <style>
+        .news-desc {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 3;
+            /* Number of lines to show */
+        }
+
+        .preview-loading-spinner {
+            display: none;
+            height: 75vh;
+            position: relative;
+        }
+
+        .preview-loading-spinner svg {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+        }
+
+        .card:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.219);
+        }
+    </style>
+
+    <!-- -------- NEWS CARD ------------- -->
+
+    <div class=" container" id="newsSection">
+        <div class="preview-loading-spinner preview-loading-news">
+            <svg version="1.1" id="preview-loading-spinner-1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px"
+                viewBox="0 0 50 50" style="enable-background: new 0 0 50 50" xml:space="preserve">
+                <path fill="#000"
+                    d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                    <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                        to="360 25 25" dur="0.65s" repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid paddding mb-5">
+        <div class="row mx-0 topNews">
+            <div class="col-md-6 col-12 paddding animate-box topHead1" data-animate-effect="fadeIn">
+                <div class="fh5co_suceefh5co_height"><img alt="head-img" class="img-fluid" />
+                    <div class="fh5co_suceefh5co_height_position_absolute"></div>
+                    <div class="fh5co_suceefh5co_height_position_absolute_font">
+                        <div class=""><a href="#" class="color_fff"> <i class="fa fa-clock-o"></i>&nbsp;&nbsp;Dec
+                                31,2024
+                            </a></div>
+                        <div class=""><a href="" class="fh5co_good_font" target="_blank"> After all is said and done,
+                                more is said than done </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 topHead2">
+                <div class="row">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------- NEWS SECTION ------------------- -->
+
+    <div class="container-fluid pt-3">
+        <div class=" animate-box" data-animate-effect="fadeIn">
+            <div class="row">
+                <div class="col-lg-2 d-none d-lg-block">
+                    <div class="ads-post">
+                        <div class="text-center"><small>ADVERTISEMENT</small></div>
+                        <div class="text-center">
+                            <a href="https://www.w3schools.com/" target="_blank">
+                                <img src="./ads3.png" alt="w3 schools" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="https://google.com/" target="_blank">
+                                <img src="./ads.webp" alt="ads-poster" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <!-- ------ TRENDING NEWS ------------ -->
+                    <div class="container-fluid pb-4 pt-5">
+                        <div class="container animate-box">
+                            <div>
+                                <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Trending</div>
+                            </div>
+
+                            <div class="owl-carousel owl-theme js" id="slider1">
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_latest_trading_img_position_relative">
+                                        <div class="fh5co_latest_trading_img"><img
+                                                src="images/allef-vinicius-108153.jpg" alt=""
+                                                class="fh5co_img_special_relative" /></div>
+                                        <div class="fh5co_latest_trading_img_position_absolute_1">
+                                            <a href="single.html" class="text-white"> Here's a new way to take better
+                                                photos for
+                                                instagram </a>
+                                            <div class="fh5co_latest_trading_date_and_name_color"> Walter Johson - March
+                                                7,2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- --------- GENERAL NEWS ---------- -->
+                    <div class="container-fluid pb-4 pt-5">
+                        <div class="container animate-box">
+                            <div>
+                                <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">News</div>
+                            </div>
+                            <div class="owl-carousel owl-theme" id="slider2">
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/39-324x235.jpg" /></div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/joe-gardner-75333.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/ryan-moreno-98837.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/seth-doyle-133175.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/seth-doyle-133175.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/seth-doyle-133175.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item px-2">
+                                    <div class="fh5co_hover_news_img">
+                                        <div class="fh5co_news_img"><img src="images/seth-doyle-133175.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <a href="single.html" class="d-block fh5co_small_post_heading"><span
+                                                    class="">The top 10
+                                                    best computer speakers in the market</span></a>
+                                            <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- videos news ---------- -->
+                    <div class="container-fluid fh5co_video_news_bg pb-5">
+                        <div class="container animate-box" data-animate-effect="fadeIn">
+                            <div>
+                                <div class="fh5co_heading fh5co_heading_border_bottom pt-5 pb-2 mb-4">Video News</div>
+                            </div>
+                            <div>
+                                <div class="owl-carousel owl-theme" id="slider3">
+                                    <div class="item px-2">
+                                        <div class="fh5co_hover_news_img">
+                                            <div class="fh5co_hover_news_img_video_tag_position_relative">
+                                                <div class="fh5co_news_img">
+                                                    <iframe width="100%" height="200"
+                                                        src="https://www.youtube.com/embed/l-D9szbnmBs?si=8f6KqqnGJ9CnMal-"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+
+                                            </div>
+                                            <div class="pt-2">
+                                                <a href="#"
+                                                    class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
+                                                    <span class="">Why Anant Ambani built "Vantara", a 3,000 acre animal
+                                                        rescue and rehab centre?</span></a>
+                                                <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item px-2">
+                                        <div class="fh5co_hover_news_img">
+                                            <div class="fh5co_hover_news_img_video_tag_position_relative">
+                                                <div class="fh5co_news_img">
+                                                    <iframe width="100%" height="200"
+                                                        src="https://www.youtube.com/embed/t3rqV-oSM6Q?si=Vn8UdyZa4Fh-h9UF"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+
+                                            </div>
+                                            <div class="pt-2">
+                                                <a href="#"
+                                                    class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
+                                                    <span class="">Top 10 Highest Paying Jobs in 2024 | Best Jobs For
+                                                        The Future</span></a>
+                                                <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item px-2">
+                                        <div class="fh5co_hover_news_img">
+                                            <div class="fh5co_hover_news_img_video_tag_position_relative">
+                                                <div class="fh5co_news_img">
+                                                    <iframe width="100%" height="200"
+                                                        src="https://www.youtube.com/embed/oWnB-7WM_Uo?si=wy51e1qiOGXlKGKX"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+
+                                            </div>
+                                            <div class="pt-2">
+                                                <a href="#"
+                                                    class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
+                                                    <span class="">Top News Headlines At 9 PM | PM Modi Lauds India
+                                                        Today's Health Giri Awards</span></a>
+                                                <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item px-2">
+                                        <div class="fh5co_hover_news_img">
+                                            <div class="fh5co_hover_news_img_video_tag_position_relative">
+                                                <div class="fh5co_news_img">
+                                                    <iframe width="100%" height="200"
+                                                        src="https://www.youtube.com/embed/wChItZKSvIU?si=iTl926R-HJn9dQkk"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        allowfullscreen></iframe>
+                                                </div>
+
+                                            </div>
+                                            <div class="pt-2">
+                                                <a href="#"
+                                                    class="d-block fh5co_small_post_heading fh5co_small_post_heading_1">
+                                                    <span class="">Top 10 Future Technology 2023 | Future Technology |
+                                                        New Technologies 2023 </span></a>
+                                                <div class="c_g"><i class="fa fa-clock-o"></i> Feb 16,2024</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 d-none d-lg-block">
+                    <div class="ads-post">
+                        <div class="text-start"><small>ADVERTISEMENT</small></div>
+                        <a href="https://www.grammarly.com/a?utm_source=gdn&utm_medium=cpc&utm_campaign=grammarlyatwork&utm_content=691083701249&gclid=EAIaIQobChMIrfO26vbchAMVbZpmAh0s_gm8EAEYASAAEgKVqvD_BwE"
+                            target="_blank">
+                            <img src="./ads.png" alt="ads-poster" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ----------- FOOTER ------------- -->
+    <div class="container-fluid fh5co_footer_bg pb-3">
+        <div class="container animate-box">
+            <div class="row">
+                <div class="col-12 spdp_right py-5"><img src="images/white_logo.png" alt="footer-img"
+                        class="footer_logo" />
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="footer_main_title py-3"> About</div>
+                    <div class="footer_sub_about pb-3"> Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                    <div class="footer_mediya_icon">
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
+                            </a></div>
+                        <div class="text-center d-inline-block"><a class="fh5co_display_table_footer">
+                                <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-lg-2">
+                    <div class="footer_main_title py-3"> Category</div>
+                    <ul class="footer_menu">
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Business</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Entertainment</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Environment</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Health</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Life style</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Politics</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; Technology</a></li>
+                        <li><a href="#" class=""><i class="fa fa-angle-right"></i>&nbsp;&nbsp; World</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 position_footer_relative">
+                    <div class="footer_main_title py-3"> Most Viewed Posts</div>
+                    <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                    <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                    <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                    <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                    <div class="footer_makes_sub_font"> Dec 31, 2016</div>
+                    <a href="#" class="footer_post pb-4"> Success is not a good teacher failure makes you humble </a>
+                    <div class="footer_position_absolute"><img src="images/footer_sub_tipik.png" alt="img"
+                            class="width_footer_sub_img" /></div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 ">
+                    <div class="footer_main_title py-3"> Last Modified Posts</div>
+                    <a href="#" class="footer_img_post_6"><img src="images/allef-vinicius-108153.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/32-450x260.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/download (1).jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/science-578x362.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/vil-son-35490.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/zack-minor-15104.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/download.jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/download (2).jpg" alt="img" /></a>
+                    <a href="#" class="footer_img_post_6"><img src="images/ryan-moreno-98837.jpg" alt="img" /></a>
+                </div>
+            </div>
+            <div class="row justify-content-center pt-2 pb-4">
+                <div class="col-12 col-md-8 col-lg-7 ">
+                    <div class="input-group">
+                        <span class="input-group-addon fh5co_footer_text_box" id="basic-addon1"><i
+                                class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control fh5co_footer_text_box" placeholder="Enter your email..."
+                            aria-describedby="basic-addon1">
+                        <a href="#" class="input-group-addon fh5co_footer_subcribe" id="basic-addon12"> <i
+                                class="fa fa-paper-plane-o"></i>&nbsp;&nbsp;Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid fh5co_footer_right_reserved">
+        <div class="container">
+            <div class="row  ">
+                <div class="col-12 col-md-6 py-4 Reserved"> © Copyright 2018, All rights reserved. Design by <a
+                        href="https://freehtml5.co" title="Free HTML5 Bootstrap templates">FreeHTML5.co</a>. </div>
+                <div class="col-12 col-md-6 spdp_right py-4">
+                    <a href="#" class="footer_last_part_menu">Home</a>
+                    <a href="Contact_us.html" class="footer_last_part_menu">About</a>
+                    <a href="Contact_us.html" class="footer_last_part_menu">Contact</a>
+                    <a href="blog.html" class="footer_last_part_menu">Latest News</a></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/news.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // -- PRELOADING --
+
+        window.addEventListener('load', function () {
+            let preloader = document.getElementsByClassName('preloading');
+
+            setTimeout(() => {
+                preloader[0].style.display = 'none';
+                preloader[0].style.pointerEvents = 'none';
+            }, 400)
+        })
+        // --- get current date --
+        const options = {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        };
+        const currentDate = new Date().toLocaleDateString('en-IN', options);
+        console.log(currentDate);
+        document.querySelector('.cur_date').textContent = currentDate;
+    </script>
+
+</body>
+
+</html>

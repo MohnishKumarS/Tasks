@@ -1,0 +1,11 @@
+# Enable the rewrite engine
+RewriteEngine on
+
+# Redirect /file.html to /file (SEO friendly)
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NE,L,R=301]
+
+# Internally map /file to /file.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

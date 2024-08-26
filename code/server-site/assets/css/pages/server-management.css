@@ -1,0 +1,9 @@
+.server-management{
+  .hero-sec{
+    background-color: #f7ffc2;
+
+    .hero-sec__waves path{
+      fill: #f7ffc2 ;
+    }
+  }
+}

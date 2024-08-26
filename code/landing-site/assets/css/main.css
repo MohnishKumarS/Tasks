@@ -1,0 +1,13 @@
+@import './style.css';
+@import './lib.css';
+
+/* -- COMMON -- */
+@import '../css/common/common.css';
+@import './common/footer.css';
+@import './common/nav.css';
+
+/* -- COMPONENT -- */
+@import './component/hero.css';
+@import './component/product-plan-1.css';
+@import './component/features-des-5.css';
+@import './component/faQ.css';

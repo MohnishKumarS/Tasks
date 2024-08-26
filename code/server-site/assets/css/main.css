@@ -1,0 +1,23 @@
+/* -- COMMON -- */
+@import url('./style.css');
+
+/* -- COMPONENT -- */
+@import url('./component/featured-des-1.css');
+@import url('./component/featured-des-2.css');
+@import url('./component/featured-des-3.css');
+@import url('./component/featured-des-4.css');
+@import url('./component/featured-des-5.css');
+@import url('./component/contact-des.css');
+@import url('./component/hero-sec.css');
+@import url('./component/product-plan-1.css');
+@import url('./component/product-plan-2.css');
+@import url('./component/suggestion-block.css');
+@import url('./component/faq.css');
+@import url('./component/nav.css');
+
+/* -- PAGES -- */
+@import url('./pages/server-management.css');
+@import url('./pages/server-migrate.css');
+@import url('./pages/server-monitor.css');
+@import url('./pages/server-setup.css');
+@import url('./pages/homepage.css');

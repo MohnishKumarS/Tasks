@@ -1,0 +1,138 @@
+/*  product plan 2 */
+.product-plan-2 {
+  padding-bottom: 100px;
+
+  & .plans {
+
+    & .plan {
+      background-color: #fffff3;
+      border: 2px solid #d1d372;
+      border-top-width: 10px;
+      border-radius: 10px;
+      padding: 30px;
+
+      & .plan-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        & .plan__icon {
+          flex: 1 1;
+          text-align: center;
+
+          & .plan__img {
+            width: 200px;
+            height: auto;
+          }
+        }
+
+        & .plan__desc {
+          flex: 2 1;
+          display: flex;
+          flex-flow: column wrap;
+          gap: 30px;
+
+          & .plan__title {
+            font-size: 1.5rem;
+            color: #333;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+          }
+
+          & .plan__price {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 1rem;
+
+            & .price-curr {
+              font-weight: 700;
+              align-self: self-start;
+              font-size: 1.1rem;
+            }
+
+            & .price-amount {
+              font-size: 3rem;
+              font-weight: 700;
+              color: #272727;
+              line-height: 0.7;
+              margin: 0 5px;
+            }
+
+            & .price-pack {
+              align-self: self-end;
+              padding-top: 5px;
+              font-size: 1rem;
+
+            }
+          }
+
+          & .plan__specs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 10px;
+
+            & .plan__details {
+              margin: 0;
+              width: calc(100% / 3 - 20px);
+
+              &::before {
+                content: url('../../image/common/tick.svg');
+                display: inline-block;
+                width: 1rem;
+                vertical-align: text-top;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        & .plan__order-btn .btn-main {
+          background: #d1d372;
+          width: 300px;
+          color: #1a1a1a;
+          font-weight: 600;
+          box-shadow: none;
+        }
+
+      }
+
+      @media only screen and (max-width:1200px) {
+        & .plan__details {
+          width: calc(100% / 2 - 10px) !important;
+        }
+      }
+
+      @media only screen and (max-width:992px) {
+        & {
+          padding: 0;
+        }
+
+        & .plan__icon {
+          padding-top: 30px;
+        }
+
+        & .plan__title,
+        .plan__price,
+        .plan__specs {
+          padding: 0 30px;
+        }
+
+        & .plan-wrapper {
+          flex-direction: column;
+          row-gap: 30px;
+        }
+
+        & .plan__order-btn .btn-main {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width:768px) {
+        & .plan__details {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+/* End product plan 2*/

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    /> -->
+  </head>
+  <style>
+    .top-marq {
+      font-family: "Asap", sans-serif;
+      background-color: aquamarine;
+      padding: 2px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: black;
+    }
+  </style>
+  <body>
+    <h2>solving Test</h2>
+
+    <script>
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          console.log(i);
+          const j = Math.floor(Math.random() * (i + 1));
+          // console.log(j);
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      // Example array
+      const myArray = [1, 2, 3, 4, 5];
+
+      // Shuffle the array
+      const shuffledArray = shuffleArray(myArray);
+      console.log("Shuffled array:", shuffledArray);
+
+      function arrFruit(fruits) {
+        fruits.sort((a, b) => a.price - b.price);
+        return fruits;
+        // for (const val of arr) {
+        //     console.log(val);
+        // }
+      }
+
+      let fruits = [
+        {
+          name: "orange",
+          price: 23,
+        },
+        {
+          name: "apple",
+          price: 55,
+        },
+        {
+          name: "watermelon",
+          price: 29,
+        },
+      ];
+
+      const arrFruits = arrFruit(fruits);
+      // console.log(arrFruits);
+
+
+
+      // find and  return the word with the most vowels
+      function wordWithMostVowels(words) {
+        let maxVowelCount = 0;
+        let wordWithMostVowels = "";
+
+        function countVowels(word) {
+          let count = 0;
+          for (const letter of word) {
+            // console.log('/aeious/ig'.match(letter));
+            if ("/aeious/ig".match(letter)) {
+              count++;
+            }
+          }
+          return count;
+        }
+        for (const word of words) {
+          console.log(word);
+          const vowelCount = countVowels(word);
+          console.log(vowelCount);
+          if (vowelCount > maxVowelCount) {
+            maxVowelCount = vowelCount;
+            wordWithMostVowels = word;
+          }
+        }
+        return wordWithMostVowels;
+      }
+
+      // Example usage:
+      const wordArray = ["hello", "world", "beautiful", "apple", "great"];
+      const word = wordWithMostVowels(wordArray);
+      console.log("Word with most vowels:", word);
+
+      //Create a function to calculate multiples of 4 from 1 to 100
+
+      function multiplesFour(num, start, end) {
+        let getFour = [];
+        for (let i = start; i < end; i++) {
+          if (i % num == 0) {
+            getFour.push(i);
+          }
+        }
+        return getFour;
+      }
+
+      let multipe_four = multiplesFour(4, 1, 100);
+      // console.log(multipe_four);
+
+      function leftRotateArray(arr, rotations) {
+        const length = arr.length;
+        const rotatedArray = [];
+        rotations %= length; // To handle cases where rotations are greater than the length of the array
+        // console.log(rotations);
+        // return arr.slice(rotations).concat(arr.slice(0, rotations));
+
+        for (let i = 0; i < length; i++) {
+          let pos = (i + rotations) % length;
+          // let pos = (i + (length - rotations)) % length;
+          // console.log(pos);
+          rotatedArray[i] = arr[pos];
+        }
+        return rotatedArray;
+      }
+
+      // Example usage:
+      var originalArrays = [1, 2, 3, 4, 5];
+      var numRotations = 4;
+      var updatedArray = leftRotateArray(originalArrays, numRotations);
+      // console.log(updatedArray);
+
+      function getTotalPrice(arg) {
+        let total = 0;
+        for (const val of arg) {
+          total += val.price * val.quantity;
+        }
+        return total;
+      }
+
+      const groceries = [
+        {
+          product: "Milk",
+          quantity: 1,
+          price: 1.5,
+        },
+        {
+          product: "Eggs",
+          quantity: 12,
+          price: 0.1,
+        },
+        {
+          product: "Bread",
+          quantity: 2,
+          price: 1.6,
+        },
+        {
+          product: "Cheese",
+          quantity: 1,
+          price: 4.5,
+        },
+      ];
+
+      const totalPrice = getTotalPrice(groceries);
+      // console.log(totalPrice);  // 10.4 output
+
+      function BoomSeven(arg) {
+        for (const val of arg) {
+          if (val == 7) {
+            return "BOOM";
+          } else {
+            return "there is no 7 in the array";
+          }
+        }
+      }
+
+      const digit7 = [2, 1, 4, 6, 7, 5, 7];
+      const digit77 = BoomSeven(digit7);
+      // console.log(digit77); // Output: Boom if 7 present
+
+      // ----- chord value -------
+      function appendFiveToChords(val) {
+        return val.map((v) => {
+          if (!v.endsWith("5")) {
+            return v + 5;
+          } else {
+            return v;
+          }
+        });
+      }
+      let array2 = ["P", "Q5", "R", "S", "T"];
+      let result2 = appendFiveToChords(array2);
+      // console.log(result2); // Output: ["P5", "Q5", "R5", "S5", "T5"]
+
+      // ------ remove duplicated array -------------
+      function removeDuplicates(arr) {
+        let $dupArr1 = new Set(arr);
+        let $dupArr2 = arr.filter((val, ind, arrs) => arrs.indexOf(val) == ind);
+        // console.log($dupArr2);
+        let $dupArr3 = [];
+        let $dupArr4 = {};
+        for (const val of arr) {
+          //  if(!$dupArr3.includes(val)){
+          //   $dupArr3.push(val);
+          //  }
+          // if ($dupArr3.indexOf(val) === -1) {
+          //   $dupArr3.push(val);
+          // }
+          if (!$dupArr4[val]) {
+            $dupArr4[val] = true;
+          }
+        }
+
+        return Object.keys($dupArr4);
+      }
+
+      const arrayWithDuplicates = [1, 2, 1, 3, 4, 3, 5, 7, 6, 7];
+      const arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
+      // console.log(arrayWithoutDuplicates); // Output: [1, 2, 3, 4, 5]
+
+      // ---- array mirror value ----
+      function mirrorArray(arr) {
+        const mirroredArray = arr.concat(
+          arr.slice(0, arr.length - 1).reverse()
+        );
+        let mir = [];
+        for (let i = 0; i < arr.length; i++) {
+          mir.push(arr[i]);
+        }
+        for (let i = arr.length - 2; i >= 0; i--) {
+          mir.push(arr[i]);
+        }
+        return mir;
+      }
+
+      var originalArray = [1, 2, 3, 4];
+      var mirrored = mirrorArray(originalArray);
+      // console.log(mirrored); // Output: [1, 2, 3, 4, 3, 2, 1]
+
+      //  --- find a max and min number in array
+      function secondLargestNumber(arr) {
+        let min = arr[0];
+        for (const val of arr) {
+          if (val < min) {
+            min = val;
+          }
+        }
+
+        return min;
+      }
+      // Example usage:
+      const numbersArray = [5, 3, 9, , -1, 7, 11, 2, 10, 1];
+      var result = secondLargestNumber(numbersArray);
+      // console.log(result); // Output: -1
+
+      function multiplesOfNumber(num, len) {
+        let arr = [];
+
+        for (let i = 1; i <= len; i++) {
+          arr.push(i * num);
+        }
+        return arr;
+      }
+
+      const num = 5;
+      const arrayLength = 7;
+      const multiplesArray = multiplesOfNumber(num, arrayLength);
+      // console.log(multiplesArray); // Output: [5, 10, 15, 20, 25, 30, 35]
+
+      function extractIntegers(arr) {
+        return arr.filter((val) => Number.isInteger(val));
+        // return typeof value !== 'number' || isNaN(value);  // not a number
+      }
+
+      // Example usage:
+      let mixedArray = [1, "apple", 3, "banana", 5, 7, "orange", "9"];
+      var result = extractIntegers(mixedArray);
+      // console.log(result);
+
+      // =========== OOPS ================
+      class fruit {
+        name = "Apple,orange";
+
+        juice() {
+          return this.name;
+        }
+      }
+
+      let obj = new fruit();
+      // console.log(obj.name);
+
+      // =========== create dup object  ===================
+
+      const originalObject = {
+        name: "Alice",
+        age: 30,
+        city: "London",
+      };
+
+      let _dupObj1 = {
+        ...originalObject,
+      };
+      let _dupObj2 = Object.assign({}, _dupObj1);
+      let _dupObj3 = JSON.parse(JSON.stringify(originalObject));
+      //  console.log(_dupObj3);
+
+      // =================== Destructuring assignment ===================
+      // Example object
+      const person = {
+        name: "Leela",
+        age: 22,
+        city: "London",
+      };
+      // const { name, age, city } = person;
+      // const {age: LeelaAge} = person
+      const { name } = person;
+      const { age:DOB } = person;
+
+      // console.log(name); // Output: Alice
+
+      // Example array
+      const numbers = [1, 2, 3, 4, 5];
+
+      // Destructuring assignment
+      const [first, second, , ...rest] = numbers;
+
+      // console.log(rest); // Output: 1
+    </script>
+  </body>
+</html>

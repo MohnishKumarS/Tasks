@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oops</title>
+  
+</head>
+
+<body>
+  <h2>test</h2>
+
+
+
+  <script>
+
+ 
+
+
+
+
+    let num = 5;  // no of rows 
+    // only understand inc and dec  because its depend on all pattern 
+
+    // ------ star patter  increment-------
+    // for (let i = 1; i <= num; i++) {  // no of rows   
+    //   // debugger;  
+    //   for (let j = 1; j <= i; j++) {  // no of columns 
+    //       document.write('*') 
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // ------ star patter  decrement -------
+    // for (let i = 1; i <= num; i++) {  // no of rows   
+
+    //   for (let j = i ; j <= num; j++) {  // no of columns 
+    //       document.write('*') 
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // ------ 3rd pattern ------- same 
+
+    // for (let i = 1; i <= num; i++) {  // no of rows   
+
+    //   for (let j = i ; j <= num; j++) {   // decrement                          *
+    //       document.write('- ')  // space replace &nbsp                         **
+    //   }                                                              //       ***
+    //   for (let j = 1 ; j <= i; j++) {  // increment                          ****
+    //       document.write('*')                                       //      *****
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // ------ 4th pattern ------- same 
+
+    // for (let i = 1; i <= num; i++) {  // no of rows                         *****
+    //   // debugger;                                                           ****
+    //   for (let j = 1 ; j <= i; j++) {   // increment                          ***
+    //       document.write('&nbsp ')                                       //    **                                                                              
+    //   }                                                                  //     *
+    //   for (let j = i ; j <= num; j++) {  // decrement  
+    //       document.write('*') 
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // ------ 5th pattern ------- diamond 
+
+
+    // for (let i = 1; i <= num; i++) {  // no of rows   
+    //   // debugger;
+    //   for (let j = i ; j <= num; j++) {   // decrement                        *
+    //       document.write('&nbsp ')                                //         ***
+    //                                                               //        *****
+    //   }                                                           //      *********
+    //   for (let j = 1 ; j <= i; j++) {  // increment  
+    //       document.write('*') 
+
+    //   }
+    //   for (let j = 1 ; j < i; j++) {  // increment  
+    //       document.write('*') 
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // ------ 6th pattern ------- diamond 
+
+    // for (let i = 1; i <= num; i++) {  // no of rows   
+    //   // debugger;
+    //   for (let j = i ; j <= num; j++) {   // decrement                        *
+    //       document.write('&nbsp ')                                //         ***
+    //                                                               //        *****
+    //   }                                                           //      *********
+    //   for (let j = 1 ; j <= i; j++) {  // increment  
+    //       document.write('*') 
+
+    //   }
+    //   for (let j = 1 ; j < i; j++) {  // increment  
+    //       document.write('*') 
+
+    //   }
+    //   document.write('<br>')
+    // }
+
+
+// ---------- 7th pattern  -------- hallow square --
+let pat = "";
+for (let i = 1; i <= num; i++) {
+
+  for (let j = 1; j <= num; j++) {                          //   ******
+  if(i == 1 || i == num || j == 1 || j == num){            //    *    *
+    pat +=  "*";                                           //    *    *   
+  }else{                                                   //    *    * 
+    pat += " ";                                            //    ******
+  }
+  
+ }
+ pat += "\n";
+
+
+  
+}
+// console.log(pat);
+// document.write(pat)
+
+let text = "The cat scattered his toys on 44 the m6at.!";
+let pattern = /ca/g;
+
+let matches = text.match(pattern);
+// let matches = pattern.test(text)
+// console.log(matches);
+
+
+  // -------------- programs solving -------
+
+  function formatIndianNumber(number) {
+  const formatter = new Intl.NumberFormat('en-IN');
+  return formatter.format(number);
+}
+
+// Example usage:
+const number = 9999;
+const formattedNumber = formatIndianNumber(number);
+// console.log(formattedNumber);
+
+
+
+  function telephoneCheck(str) {
+    const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
+  return phoneRegex.test(str);
+}
+
+let tel = telephoneCheck("555-555-5555");
+// console.log(tel);
+
+
+  function rot13(str) {
+ return  str.replace(/[A-Z]/g,(char) => {
+      // console.log(char.charCodeAt(0));
+      // console.log(char);
+      let code  = char.charCodeAt(0);
+      let decode = char;
+
+      if(code >= 65 && code <= 77){
+        decode = String.fromCharCode(code + 13);
+      }else if(code > 77 && code <= 90) {
+        decode = String.fromCharCode(code - 13)
+      }
+      return decode;
+  });
+}
+
+let rot = rot13("SERR2 PBQR PNZC!");
+// console.log(rot);
+
+
+  function convertToRoman(num) {
+    const romanNumerals = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1,
+  };
+  // console.log(Object.keys(romanNumerals).length);
+  let romanWord  = "";
+
+  for (const key in romanNumerals) {
+    // debugger;
+   while (num >= romanNumerals[key]) {
+    romanWord += key;
+      num -= romanNumerals[key];
+   }
+  }
+  return romanWord;
+}
+
+let roman = convertToRoman(112);
+// console.log(roman);
+
+  function palindrome(str) {
+    const cleanStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    for (let i = 0; i < cleanStr.length / 2; i++) {
+      // console.log(cleanStr[i]);
+      if(cleanStr[i] != cleanStr[cleanStr.length - 1 -i] ){
+        return false;
+      }
+      
+    }
+    return true;
+}
+
+let palindromes = palindrome("malayalam");
+// console.log(palindromes);
+
+
+
+
+
+    // ------------- algorithm programming ---------------
+
+
+    const Person = function (first, last) {
+      let firstName = first;
+      let lastName = last;
+
+      this.getFirstName = function(){
+        return firstName;
+      }
+      this.getLastName = function(){
+        return lastName;
+      }
+      this.setFirsttName = function(a){
+        return firstName = a;
+      }
+      this.setLastName = function(b){
+        return lastName = b;
+      }
+      this.getFullName = function () {
+        return this.getFirstName() + " " + this.getLastName();
+      };
+      this.setFullName = function (a,b){
+        this.setFirsttName(a);
+        this.setLastName(b);
+        return this.getFullName();
+      }
+    };
+
+    let person = new Person("Moni", "Lee");
+    let len = Object.keys(Person).length;
+    // console.log(len);
+        // console.log(person.getLastName());
+    // console.log(person.setLastName("ada"));
+
+    function addTogether(a, b) {
+      const [first, second] = arguments;
+      // console.log(typeof(first));
+      function addsum(num) {
+        if (typeof (second) == "number") {
+          return first + second;
+        }
+      }
+      if (typeof (first) == "number") {
+        if (arguments.length == 1) return addsum;
+        if (arguments.length == 2) return addsum(second);
+
+      }
+    }
+
+    let addTo = addTogether(7, 3);
+    // console.log(addTo);
+
+
+
+
+    function truthCheck(collection, pre) {
+      return collection.every(val => val[pre]);
+    }
+
+    let truth = truthCheck([{
+      name: "Quincy",
+      role: "Founder",
+      isBot: false
+    }, {
+      name: "Naomi",
+      role: "",
+      isBot: false
+    }, {
+      name: "Camperbot",
+      role: "Bot",
+      isBot: true
+    }], "isBot");
+
+    // console.log(truth);
+
+
+
+
+
+    function binaryAgent(str) {
+      let apl = str.split(' ').map(val => String.fromCharCode(parseInt(val, 2)));
+      return apl.join('')
+    }
+    let binary = binaryAgent(
+      "01001001 00100000 01101100 01101111 01110110 01100101 00100000 01000110 01110010 01100101 01100101 01000011 01101111 01100100 01100101 01000011 01100001 01101101 01110000 00100001"
+      )
+    // console.log(binary);
+
+
+
+
+    var newArr = [];
+
+    function steamrollArray(arr) {
+      // debugger;
+      for (var i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+          steamrollArray(arr[i]);
+        } else {
+          newArr.push(arr[i]);
+        }
+      }
+      return newArr;
+    }
+
+    let steam = steamrollArray([1, [2], {},
+      [3, [
+        [4]
+      ]]
+    ]);
+    // console.log(steam);
+
+    function dropElements(arr, func) {
+      //       let sArr = [];
+      //  for (const val of arr) {
+      //      if(func(val)){
+      //       sArr.push(val)
+      //      }
+      //  }
+      // debugger;
+      //  let originalLen = arr.length;
+      // for (let i = 0; i < originalLen; i++) {
+      //   if (func(arr[0])) {
+      //     break;
+      //   } else {
+      //     arr.shift();
+      //   }
+      // }
+      // return arr;
+      // debugger;
+      while (arr.length > 0 && !func(arr[0])) {
+        arr.shift();
+      }
+      return arr;
+
+      //  return sArr;
+    }
+
+    let drop = dropElements([0, 1, 0, 1], function (n) {
+      return n === 1;
+    });
+    // console.log(drop);
+
+    function sumPrimes(num) {
+      var primes = [];
+      var sum = 0;
+      for (var i = 2; i <= num; i++) {
+        // debugger;
+        var checkForPrime = true;
+        for (var j = 2; j < i; j++) {
+          if (i % j === 0) {
+            checkForPrime = false;
+            break;
+          }
+        }
+        sum += checkForPrime ? i : 0;
+        checkForPrime ? primes.push(i) : "";
+      }
+      // console.log(primes);
+      return sum;
+      //   isPrime = true;
+      // for (let i = 2; i < num; i++) {
+      //    if(num % i == 0){
+      //      isPrime = false;
+      //      break;
+      //    }
+
+      // }
+
+      // if(isPrime){
+      //   return `${num} is a prime number`;
+      // }else{
+      //   return `${num} is  not a prime number`;
+      // }
+    }
+
+    let prime = sumPrimes(20);
+    // console.log(prime);
+
+    function sumFibs(num) {
+      let next;
+      let n1 = 0;
+      let n2 = 1;
+
+      for (let i = 0; i <= num; i++) {
+        // console.log(n1);
+        next = n1 + n2;
+        n1 = n2;
+        n2 = next;
+      }
+      //   let prevNumber = 0;
+      // let currNumber = 1;
+      // let result = 0;
+      // while (currNumber <= num) {
+      //   if (currNumber % 2 !== 0) {
+      //     result += currNumber;
+      //   }
+      //   currNumber += prevNumber;
+      //   prevNumber = currNumber - prevNumber;
+      // }
+
+      // return result;
+    }
+
+    let fib = sumFibs(4);
+    // console.log(fib);
+
+    function convertHTML(str) {
+      function word(val) {
+        switch (val) {
+          case "&":
+            return "&amp";
+            break;
+          case "<":
+            return "&lt";
+            break;
+          case ">":
+            return "&gt";
+            break;
+          case '"':
+            return "&quot";
+            break;
+          case "'":
+            return "&apos";
+            break;
+          default:
+            return val;
+        }
+      }
+      let sam2 = "";
+      let sam1 = str.split("").forEach((val) => {
+        sam2 += word(val);
+      });
+
+      return sam2;
+    }
+
+    let convert = convertHTML("<>");
+    // console.log(convert);
+
+    function uniteUnique(arr) {
+      // let newArr = [...arr1,...arr2,...arr3]
+      const args = [...arguments];
+
+      //  let dup = new Set(newArr);    // set 1
+      // let dup = newArr.filter((val,ind,arr) => arr.indexOf(val) == ind );  // set 2
+      let uniArr = [];
+      // for (const val of newArr) {
+      //     if(!uniArr.includes(val)){
+      //       uniArr.push(val)
+      //     }
+      // }
+      // for (const val of newArr) {
+      //     if(uniArr.indexOf(val) == -1){
+      //         uniArr.push(val)
+      //     }
+      // }
+      return args.flat();
+    }
+
+    let unique = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+    // console.log(unique);
+
+    function fearNotLetter(str) {
+      // return str;
+      let alp = "abcdefghijklmnopqrstuvwxyz";
+      let len = str.length;
+      let start = alp.indexOf(str[0]);
+      let j = 0;
+      let word = undefined;
+      for (let i = start; i <= start + len; i++) {
+        // console.log(alp[i]);
+        if (alp[i] != str[j]) {
+          word = alp[i];
+          break;
+        }
+        j++;
+      }
+      return word;
+    }
+
+    let fearNotLetters = fearNotLetter("rstuwxyz");
+    // console.log(fearNotLetters);
+
+    function pairElement(str) {
+      let pairs = [];
+
+      function set(p) {
+        switch (p) {
+          case "A":
+            return ["A", "T"];
+            break;
+          case "T":
+            return ["T", "A"];
+            break;
+          case "C":
+            return ["C", "G"];
+            break;
+          case "G":
+            return ["G", "C"];
+            break;
+        }
+      }
+
+      for (const val of str) {
+        pairs.push(set(val));
+      }
+      return pairs;
+    }
+
+    let pair = pairElement("GCG");
+    // console.log(pair);
+
+    function myReplace(str, before, after) {
+      if (before[0] === before[0].toUpperCase()) {
+        after = after[0].toUpperCase() + after.slice(1);
+      }
+      str = str.replace(before, after);
+      return str;
+    }
+
+    let replace = myReplace(
+      "A quick brown fox jumped over the lazy dog",
+      "jumped",
+      "leaped"
+    );
+    // console.log(replace);
+
+    function whatIsInAName(collection, source) {
+      // let newArr = [] ;
+      // const sourceKeys = Object.keys(source);
+      // // console.log(source);
+      // for (const val of collection) {
+      //   let name =false;
+      //   // console.log(val);
+      //    for (const key in source ) {
+      //     console.log(val[key]);
+      //       if(val[key] !== source[key]){
+      //          name = true;
+      //       }
+
+      //    }
+
+      //    if(!name){
+      //       newArr.push(val);
+      //    }
+      // }
+      // return  newArr;
+      const sourceKeys = Object.keys(source);
+
+      return collection.filter((obj) =>
+        sourceKeys.every((key) => obj[key] === source[key])
+      );
+    }
+
+    let whatname = whatIsInAName(
+      [{
+        apple: 1,
+        bat: 2
+      }, {
+        apple: 1
+      }, {
+        apple: 1,
+        bat: 2,
+        cookie: 2
+      }], {
+        apple: 1,
+        cookie: 2
+      }
+    );
+    // console.log(whatname);
+
+    function destroyer(arr, ...arr1) {
+      let newArr = [];
+      for (const val of arr) {
+        if (!arr1.includes(val)) {
+          newArr.push(val);
+        }
+      }
+      return newArr;
+    }
+
+    let $dest = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+    // console.log($dest);
+
+    function diffArray(arr1, arr2) {
+      const newArr = [];
+
+      function diff(one, two) {
+        for (const val of one) {
+          if (!two.includes(val)) {
+            newArr.push(val);
+          }
+        }
+      }
+
+      diff(arr1, arr2);
+      diff(arr2, arr1);
+      return newArr;
+    }
+
+    let diff = diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+    // console.log(diff);
+
+    // ------------- functional programming ---- -----------
+
+    function adds(x) {
+      // Only change code below this line
+      return function (y) {
+        return function (z) {
+          return x + y + z;
+        };
+      };
+
+      // Only change code above this line
+    }
+
+    let last = adds(10)(20)(30);
+    //   console.log(last);
+
+    function checkPositive(arr) {
+      // Only change code below this line
+
+      return arr.every((val) => val > 0);
+      //   let check ;
+      //         for (const key in arr) {
+      //            if(arr[key] > 0){
+      //             check = true;
+      //            }else{
+      //             check = false;
+      //            }
+      //         }
+      //         return check;
+
+      // Only change code above this line
+    }
+
+    let positive = checkPositive([1, 2, 3, 4]);
+    //   console.log(positive);
+
+    function splitify(str) {
+      // Only change code below this line
+      // return str.split(/\W/)
+      // return str.split(/\W/).join(' ')
+      // return str.trim().split(/\s+/).join('-').toLowerCase()
+      // return str.split(" ").filter((substr) => substr !== "");
+      // var regex = /\s+|_+/g;
+
+      // Replace low-upper case to low-space-uppercase
+      str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+
+      // return str;
+      // Only change code above this line
+    }
+
+    // console.log(splitify("A   Mind    Needs Books Like A Sword Needs A          Whetstone"));
+    // console.log(splitify("All the-small Things"));
+
+    function reverseAlpha(arr) {
+      return arr.sort(function (a, b) {
+        return a === b ? 0 : a < b ? -1 : 1;
+      });
+    }
+
+    // console.log(reverseAlpha(['l', 'h', 'z', 'b', 's']));
+
+    const squareList = (arr) => {
+      // Only change code below this line
+      return arr
+        .filter((num) => {
+          return num > 0 && num % parseInt(num) === 0;
+        })
+        .map((num) => {
+          return Math.pow(num, 2);
+        });
+      // Only change code above this line
+    };
+
+    const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+    // console.log(squaredIntegers);
+
+    // =========== oops ==================
+    let sam = "ass";
+
+    function Dog(a, b) {
+      this.name = a;
+      this.color = b;
+      this.numLegs = 2;
+      this.objs = sam;
+      // console.log(this.name);
+    }
+    Dog.prototype = {
+      numLegs: 2,
+      eat: function () {
+        console.log("biscuit");
+      },
+      describe: function () {
+        return "My name is " + this.name;
+      },
+    };
+    let pet = new Dog("lee", "green");
+    console.log(pet);
+    let animal = Object.create(Dog.prototype);
+    // console.log(animal);
+    // console.log(pet.constructor === Bird);
+
+    function Bird(name) {
+      this.name = name;
+      // this.numLegs = 5;
+    }
+    Bird.prototype.numLegs = 5;
+
+    let canary = new Bird("Tweety");
+    // console.log(canary);
+
+    let bird = {
+      name: "Donald",
+      numLegs: 2,
+    };
+
+    function rest(bird) {
+      return bird;
+    }
+
+    // console.log(obj = {
+    //     ...bird
+    // });
+
+    let boat = {
+      name: "Warrior",
+      type: "race-boat",
+    };
+
+    let arr = () => true;
+
+    let funModule = (function () {
+      return {
+        isCuteMixin: function (obj) {
+          obj.isCute = function () {
+            return true;
+          };
+        },
+        singMixin: function (obj) {
+          obj.sing = function () {
+            console.log("Singing to an awesome tune");
+          };
+        },
+      };
+    })();
+
+    //  let ownProps = [];
+    //  let prototypeProps = [];
+    //         for (let property in canary) {
+    //             console.log(property);
+    //             if (canary.hasOwnProperty(property)) {
+    //                 ownProps.push(property);
+    //             } else {
+    //                 prototypeProps.push(property);
+    //             }
+    //         }
+    //         console.log(ownProps);
+    //         console.log(prototypeProps);
+
+    //         let ownProps = [];
+    //         for (let property in canary) {
+    //   if(canary.hasOwnProperty(property)) {
+    //     ownProps.push(canary[property]);
+    //   }
+    // }
+
+    // console.log(ownProps);
+
+    //   ================== onject and array ========
+    //   var a = -1;
+    //   ++a;
+    //   console.log(a);
+    //   var b = 0;
+    //   // debugger
+    //   while (a < 3) {
+    //     a++;
+    //     b += a;
+    //     // console.log(a);
+    //   }
+
+    //   let obj = {
+    //     name: "moni",
+    //     age: 23,
+    //     gender: "male",
+    //   };
+    //   // console.log(obj);
+    //   delete obj.name;
+    //   obj.name = "moni";
+    //   copy_obj = Object.assign(obj, {});
+
+    //   console.log(copy_obj);
+    //   $arr = [1, 2, 3, 4, 21, 1, 2, 3];
+    //   $dup = new Set($arr);
+
+    //   console.log($dup);
+  </script>
+</body>
+
+</html>

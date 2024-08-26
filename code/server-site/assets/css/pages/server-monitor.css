@@ -1,0 +1,9 @@
+.server-monitor{
+  .hero-sec{
+    background-color: #fbdada;
+
+    .hero-sec__waves path{
+      fill: #fbdada ;
+    }
+  }
+}

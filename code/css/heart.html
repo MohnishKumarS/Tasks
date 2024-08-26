@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>heart 🧡</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="concept">
+      <div class="heart"></div>
+    </div>
+    <div class="concept">
+      <div class="heart2">Papu</div>
+    </div>
+    <div class="concept">
+      <div class="heart3">
+        Happy <br> Valentines's <br> Day <br> Lee
+      </div>
+    </div>
+    <div class="concept">
+      <div class="heart4">Today is not  a special day for our love.  Every Moment I spend time with You is Special 💖 for me. We'll spread a love on each and every moment of our life. I want to remind you that I'm here for you, not just today, but always.
+        I'll be always there for you. I'll be always cheering you, supporting you, loving you & torturing you😬. You are my greatest happiness forever😂. Thank you for being the incredible person you are</div>
+      </div>
+      <div class="concept">
+        <div class="heart3">
+          I don't know <br>
+          how lucky I am to have you in my life😍 
+        </div>
+      </div>
+      <div class="concept">
+        <div class="heart3">
+         Love You Chellam😘
+        </div>
+      </div>
+      <div class="concept">
+        <div class="heartimg">
+         <img src="./lee.jpeg" alt="" width="500">
+        </div>
+      </div>
+  </div>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body {
+      /* position: relative; */
+      background-color: rgb(0, 0, 0);
+      min-height: 100vh;
+      width: 100%;
+      font-family: 'PT Serif', serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto;
+      
+    }
+
+    .concept{
+      block-size: 100vh;
+      scroll-snap-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(22, 18, 18);
+
+    }
+
+    .heart {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background-color: rgb(255, 2, 2);
+      transform: rotate(-45deg);
+      box-shadow: -10px 10px 90px red;
+      animation: beat 1s ease-in infinite;
+
+      &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-color: inherit;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 75px;
+      }
+
+      &::after {
+        content: '';
+        width: 150px;
+        height: 150px;
+        background-color: inherit;
+        border-radius: 50%;
+        position: absolute;
+        left: 75px;
+      }
+    }
+
+    @keyframes beat {
+      0% {
+
+        scale: 1.07;
+      }
+
+      80% {
+
+        scale: 1.0;
+      }
+
+      100% {
+
+        scale: 0.8;
+      }
+    }
+
+    span{
+      position: absolute;
+      pointer-events: none;
+      filter: drop-shadow(0,0,0,.5);
+      animation:  fadeInOut 1s linear infinite;
+      height: 100px;
+      width: 100px;
+      z-index: 100;
+      transform: rotate(10deg);
+      transition: .5s all linear;
+    }
+
+    @keyframes fadeInOut{
+      0%,100%{
+        opacity: 0;
+      }
+      20%,80%{
+        opacity: 1;
+      }
+    }
+    span::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background: url('./heart2.png'); */
+      background-size: cover;
+      animation: moveShape 1s linear infinite;
+    }
+
+    @keyframes moveShape{
+      0%{
+        transform: translate(0) rotate(0deg);
+      }
+      100%{
+        transform: translate(200px) rotate(360deg);
+      }
+    }
+
+    .heart2{
+      color: white;
+      font-size: 3rem;
+    }
+    .heart3{
+      color: white;
+      font-size: 3.5rem;
+      -webkit-text-stroke: 1px red;
+    }
+    .heart4{
+      width: 600px;
+      margin: auto;
+      color: white;
+      font-size: 1rem;
+    }
+    .heartimg{
+      width: 500px;
+      margin: auto;
+      color: white;
+      font-size: 1rem;
+    }
+ 
+  </style>
+
+
+<script>
+   document.addEventListener('mousemove',function(e){
+
+     let body = document.getElementsByTagName('body')[0];
+     let heart = document.createElement('span');
+
+    console.log(e);
+     let x = e.offsetX;
+     let y = e.offsetY;
+    // console.log(x,y);
+     heart.style.left = x + 'px';
+     heart.style.top = y + 'px';
+
+     let size = Math.floor(Math.random() * 80);
+      // console.log(size);
+     heart.style.width = size + 'px' ;
+     heart.style.height =  size + 'px' ;
+
+     let transformValue = Math.floor(Math.random() * 360);
+      // console.log(transformValue);
+     heart.style.transform = `rotate(${transformValue}deg)`;
+
+
+     document.body.appendChild(heart);
+
+     setTimeout(() => {
+         heart.remove();
+     }, 1000);
+
+   })
+</script>
+</body>
+
+</html>

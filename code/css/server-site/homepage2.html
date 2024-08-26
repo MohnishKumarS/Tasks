@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="homepage2.css">
+  <link rel="stylesheet" href="lib.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+
+  <section class="hero-sec">
+    <nav class="navbar navbar-expand-lg " id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="nav__logo" src="image/ewallhost-logo.svg" alt="eWallHost" width="300px" height="107px"
+            title="eWallHost">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                <img src="./image/server-manage.svg" class="nav-link_img" width="150" height="150">
+                Server Management
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="./image/server-manage.svg" class="nav-link_img" width="150" height="150">
+                Server Setup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="./image/server-manage.svg" class="nav-link_img" width="150" height="150">
+                Server Monitoring</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="./image/server-manage.svg" class="nav-link_img" width="150" height="150">
+                Migration Services</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="scrolling-line"></div>
+    </nav>
+    <div class="container">
+      <div class="hero-sec__content">
+        <h1 class="hero-sec__title">
+          SERVER MANAGEMENT SERVICES
+        </h1>
+        <p class="hero-sec__sub-title">
+          Save your time in managing servers offers world class cPanel Server Management with 24/7 monitoring.
+        </p>
+      </div>
+    </div>
+    <div class="hero-sec__waves">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,213.3C384,213,480,171,576,154.7C672,139,768,149,864,144C960,139,1056,117,1152,112C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    </div>
+  </section>
+
+
+  <style>
+   
+    /* navbar */
+    .navbar {
+      padding: 0 15px;
+      min-height: 70px;
+    }
+
+    .navbar-brand {
+      background-color: white;
+    }
+
+    /* .navbar-collapse.show {
+      background-color: white;
+      .nav-link {
+        color: black !important;;
+      }
+    } */
+    .nav__logo {
+      width: 135px;
+      height: auto;
+    }
+
+    .nav-link {
+      /* color: white !important; */
+      color: rgb(26, 26, 26) !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    .nav-link_img {
+      width: 30px;
+      height: auto;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      transition: all .5s ease;
+
+      & .scrolling-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0px;
+        height: 2px;
+        background-color: #ee3d75;
+      }
+
+      &.fixed {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        animation: upsideDown .5s;
+        transition: animation .5s ease;
+        z-index: 1000;
+
+
+        & .nav-link {
+          color: rgb(26, 26, 26) !important;
+        }
+      }
+    }
+
+
+
+    @keyframes upsideDown {
+      0% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+      }
+    }
+
+    /* hero section */
+    .hero-sec {
+      position: relative;
+      /* background: url('./image/header-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; */
+      /* background: linear-gradient(to top,transparent,#a2d9ff); */
+      background-color: #a2d9ff;
+
+      & .hero-sec__content {
+        padding: 150px 0 60px;
+        color: #fff;
+        text-align: center;
+
+        & .hero-sec__title {
+          font-size: 3rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: #2d5d80;
+          -webkit-text-stroke: 1px rgb(37, 30, 30);
+        }
+
+        & .hero-sec__sub-title {
+          font-size: 1rem;
+          color: #0f3d5e;
+        }
+      }
+      &  .hero-sec__waves{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      z-index: -1;
+    }
+
+    @media only screen and (max-width:991px){
+      & .hero-sec__title{
+        font-size: 2rem !important;
+      }
+      &  .hero-sec__waves{
+        height: 6%;
+      }
+    }
+    @media only screen and (max-width:768px){
+      & .hero-sec__title{
+        font-size: 1.5rem !important;
+      }
+      & .hero-sec__sub-title {
+        font-size: 0.9rem !important;
+      }
+
+    }
+    }
+  </style>
+
+  <script>
+    // script.js
+    window.addEventListener('scroll', function () {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 400) {
+        navbar.classList.add('fixed');
+      } else {
+        navbar.classList.remove('fixed');
+      }
+    });
+  </script>
+
+  <style>
+    .site-title {
+      margin: 0 0 50px;
+      position: relative;
+
+      & .site__txt {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #ee3d75;
+        padding: 0 20px;
+      }
+
+      & svg path {
+        stroke: #ee3d75;
+      }
+
+      &.centered {
+        text-align: center;
+      }
+
+      &.title-lined {
+        position: relative;
+        margin-bottom: 60px;
+
+        &::before {
+          content: '';
+          width: 15px;
+          height: 4px;
+          background-color: #ee3d75;
+          border-radius: 2px;
+          position: absolute;
+          left: 50%;
+          bottom: -30%;
+          margin-left: -35px;
+          transform: translateX(-50%);
+          transition: all 0.3s ease;
+          z-index: 1;
+
+        }
+
+        &::after {
+          content: '';
+          width: 65px;
+          height: 4px;
+          background-color: #ee3d75;
+          border-radius: 2px;
+          position: absolute;
+          left: 50%;
+          bottom: -30%;
+          margin-left: -22px;
+          transition: all 0.3s ease;
+          z-index: 0;
+
+        }
+
+        /* &:hover{
+        &::before{
+          width: 65px;
+          margin-left: -5px;
+        }
+        &::after{
+          width: 15px;
+          margin-left: 35px;
+        }
+      } */
+      }
+
+    }
+
+    .product-plans:hover,
+    .product-plan-2:hover {
+      .site-title.title-lined {
+        &::before {
+          width: 65px;
+          margin-left: -5px;
+        }
+
+        &::after {
+          width: 15px;
+          margin-left: 35px;
+        }
+      }
+    }
+  </style>
+
+
+
+  <style>
+    /* footer */
+    .footer-wrap {
+      padding: 50px 0;
+
+      .footer-text {
+        text-align: center;
+        font-size: 1rem;
+
+      }
+
+    }
+
+    /* END footer */
+    /* contact us */
+    .contact-wrapper {
+      padding: 100px 0;
+      background-color: #eff0ff;
+
+      .contact-head {
+        color: #44357c;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+      }
+
+      .contact-subhead {
+        font-size: .9rem;
+        color: #5e6371;
+        margin-bottom: 20px;
+      }
+
+      .contact-row {
+
+        .contact-col {
+          padding: 0;
+
+          .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 50px 30px;
+            box-shadow: 1px 1px 15px 2px #44357c50;
+          }
+
+          .contact-details {
+            height: 100%;
+            padding: 50px 50px;
+
+            .contact-info {
+
+              .contact-info__items {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                row-gap: 40px;
+
+                .contact-info__item {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  column-gap: 30px;
+
+                  .contact-info__icon i {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #ee3d75;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 1.2rem;
+                    line-height: 60px;
+                    text-align: center;
+                  }
+
+                  .contact-info__txt {
+                    flex: 1 1;
+                    font-size: 1.1rem;
+                    color: #44357c;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+
+      @media only screen and (max-width:768px) {
+        .contact-form {
+          padding: 50px 15px !important;
+        }
+
+        .contact-details {
+          padding: 50px 15px !important;
+        }
+      }
+
+    }
+
+    .form_input,
+    .form_text-area {
+      outline: none;
+      width: 100%;
+      height: 50px;
+      border: 1px solid #ccc;
+      padding-left: 20px;
+      margin-bottom: 30px;
+
+      &::placeholder {
+        color: #5e6371;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+    }
+
+    .form_text-area {
+      padding-top: 20px;
+      min-height: 100px;
+    }
+
+    .form_input:active,
+    .form_input:focus,
+    .form_text-area:active,
+    .form_text-area:focus {
+      border: 1px solid #3a3a3a;
+    }
+
+    /* END contact us */
+  </style>
+  <!-- about us -->
+  <section class="featured-des-1">
+    <div class="container">
+      <div class="featured-des__wrapper">
+        <div class="featured-des__content">
+          <h2 class="site-title">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+                <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              </svg></span>
+            <span class="site__txt">About us</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+                <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              </svg></span>
+          </h2>
+          <div class="featured-des__head">
+            Enriched with 12+ years of Experience in IT Services Industry, Truetech provides Application Development &
+            other IT Services to large enterprises across different industries.
+          </div>
+          <div class="featured-des__desc">
+            We offer services that take care of a client’s varied needs with digital products. We are truly the
+            destination for our clients to enhance their organization’s products and offerings with our tech expertise,
+            experience and skills.
+          </div>
+        </div>
+        <div class="featured-des__suggest">
+          <div class="featured-des__items">
+            <div class="featured-des__item">
+              <div class="featured-des__icon">
+                <i class="fa-solid fa-clock ficon"></i>
+              </div>
+              <h5 class="featured-des__title">Save Money, Save Time</h5>
+              <div class="featured-des__subtit">Detect potential faults and failures before they happen</div>
+            </div>
+            <div class="featured-des__item">
+              <div class="featured-des__icon">
+                <i class="fa-solid fa-rocket ficon"></i>
+              </div>
+              <h5 class="featured-des__title">Our Service, Your Schedule</h5>
+              <div class="featured-des__subtit">Faster, better decisions with real-time data and insights</div>
+            </div>
+            <div class="featured-des__item">
+              <div class="featured-des__icon">
+                <i class="fa-solid fa-handshake ficon"></i>
+              </div>
+              <h5 class="featured-des__title">24/7 support</h5>
+              <div class="featured-des__subtit">We aim to deliver smart support solutions</div>
+            </div>
+            <div class="featured-des__item">
+              <div class="featured-des__icon">
+                <i class="fa-solid fa-globe ficon"></i>
+              </div>
+              <h5 class="featured-des__title">Diverse Service</h5>
+              <div class="featured-des__subtit">Detect potential faults and failures before they happen</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--  END about us -->
+  <style>
+    .featured-des-1 {
+      padding: 150px 0 100px;
+
+      & .featured-des__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+
+        & .featured-des__content {
+          flex: 1 1;
+
+          & .featured-des__head {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+
+          }
+
+          & .featured-des__desc {
+            font-size: 0.8rem;
+            color: #5e6371;
+            line-height: 1.6;
+          }
+        }
+
+        & .featured-des__suggest {
+          flex: 2 1;
+
+          & .featured-des__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+
+            & .featured-des__item {
+              /* max-width: 255px; */
+              /* width: 50%; */
+              width: calc(100% / 2 - 100px);
+              /* margin: 40px; */
+              padding: 40px 25px;
+              border-radius: 10px;
+              background-color: #f3f3f3;
+              text-align: center;
+              transform: translateY(0);
+              transition: all 0.3s ease;
+
+              & .featured-des__icon {
+                width: 70px;
+                height: 70px;
+                background-color: #fff;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto 20px;
+                filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.267));
+
+                & i.ficon {
+                  font-size: 2rem;
+                  color: #313131;
+                }
+              }
+
+              & .featured-des__title {
+                font-size: 1.2rem;
+              }
+
+              & .featured-des__subtit {
+                font-size: 0.8rem;
+                color: #5e6371;
+              }
+
+              &:nth-child(1) {
+                background-color: #e4f1df;
+              }
+
+              &:nth-child(2) {
+                transform: translateY(-32px);
+                background-color: #f3e9f7;
+              }
+
+              &:nth-child(3) {
+                background-color: #e7f2fa;
+              }
+
+              &:nth-child(4) {
+                transform: translateY(-32px);
+                background-color: #eff0fa;
+              }
+
+              &:hover {
+                background-color: #fff;
+
+                &:nth-child(1) {
+                  & .featured-des__icon {
+                    background-color: #e4f1df;
+                  }
+                }
+
+                &:nth-child(2) {
+                  & .featured-des__icon {
+                    background-color: #f3e9f7;
+                  }
+                }
+
+                &:nth-child(3) {
+                  & .featured-des__icon {
+                    background-color: #e7f2fa;
+                  }
+                }
+
+                &:nth-child(4) {
+                  & .featured-des__icon {
+                    background-color: #eff0fa;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width:992px) {
+        & .featured-des__wrapper {
+          flex-direction: column;
+          row-gap: 100px;
+        }
+
+      }
+
+      @media only screen and (max-width:768px) {
+
+        & .featured-des__item {
+          width: 100% !important;
+          transform: translateY(0) !important;
+        }
+      }
+    }
+  </style>
+
+  <!-- product plans -->
+  <section class="product-plans">
+    <div class="container">
+      <!-- <h2 class="featured-des-4__title sec-title center">
+        Choose your Ideal <span class="sec-title__highlight"> Plan </span>
+      </h2> -->
+      <h2 class="site-title centered title-lined">
+        <span class="site__txt">Our plans</span>
+      </h2>
+
+      <h2 class="product-plans__title sec-title js-product_title" hidden></h2>
+      <p class="product-plans__desc js-product_desc" hidden></p>
+      <div class="plans js-product-plans">
+        <div class="plan ">
+          <div class="plan__header">
+            <h3 class="plan__name">Basic</h3>
+          </div>
+          <div class="plan__price">
+            <span class="price-curr">₹</span>
+            <span class="price-amount">2176</span>
+            <span class="price-pack">/ month</span>
+          </div>
+          <div class="plan__order-btn">
+            <button class="btn-normal">Add to cart</button>
+          </div>
+          <div class="plan__spec">
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Domains: 1</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Disk Space: 1 GB</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Bandwidth: Unlimited</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">MySQL DB: 5</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Email Accounts: 5</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="plan">
+          <div class="plan__header">
+            <h3 class="plan__name">Standard</h3>
+          </div>
+          <div class="plan__price">
+            <span class="price-curr">₹</span>
+            <span class="price-amount">2176</span>
+            <span class="price-pack">/ month</span>
+          </div>
+          <div class="plan__order-btn">
+            <button class="btn-normal">Add to cart</button>
+          </div>
+          <div class="plan__spec">
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Domains: 1</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Disk Space: 1 GB</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Bandwidth: Unlimited</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">MySQL DB: 5</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Email Accounts: 5</span>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- <div class="plan ">
+          <div class="plan__header">
+            <h3 class="plan__name">Pro</h3>
+          </div>
+          <div class="plan__price">
+            <span class="price-curr">₹</span>
+            <span class="price-amount">2176</span>
+            <span class="price-pack">/ month</span>
+          </div>
+          <div class="plan__order-btn">
+            <button class="btn-normal">Add to cart</button>
+          </div>
+          <div class="plan__spec">
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Domains: 1</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Disk Space: 1 GB</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Bandwidth: Unlimited</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">MySQL DB: 5</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Email Accounts: 5</span>
+            </div>
+
+          </div>
+
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+  <!-- END product plans -->
+
+  <!--  product plans 2 -->
+  <div class="product-plan-2">
+    <div class="container">
+      <h2 class="site-title centered title-lined">
+        <span class="site__txt">Our SERVICES</span>
+      </h2>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-wrapper">
+            <div class="plan__icon">
+              <img src="image/SVG/web-server.svg" class="plan__img" width="150" height="150" alt="">
+            </div>
+            <div class="plan__desc">
+              <h3 class="plan__title">Linux Server Management</h3>
+              <div class="plan__price">
+                <span class="price-curr">₹</span>
+                <span class="price-amount">2176</span>
+                <span class="price-pack">/ month</span>
+              </div>
+              <div class="plan__specs">
+                <p class="plan__details">Basic Server Setup</p>
+                <p class="plan__details">Core Server Management</p>
+                <p class="plan__details">Server Hardening</p>
+                <p class="plan__details">Security Enhancement</p>
+                <p class="plan__details">Restoration</p>
+                <p class="plan__details">Kernel Updates</p>
+                <p class="plan__details">Troubleshooting Common Issues</p>
+                <p class="plan__details">Email and Ticket Support</p>
+              </div>
+              <div class="plan__order-btn">
+                <button class="btn-normal" id="orderNow">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END product plans 2 -->
+
+  <script>
+    const orderBtn = document.getElementById('orderNow');
+
+    orderBtn.addEventListener('click', function (e) {
+      console.log('sended');
+      localStorage.setItem('order', 'serverVPS');
+      let mess = "hello moni";
+
+      // location.href = '?name=server&plan=annual';
+
+      fetch('https://srisaidecors.com/sample.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            // 'Content-Type': 'application/json',
+            // "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            message: mess
+          })
+        })
+        .then(res => res.text())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    })
+    let search = location.search.substring(1).split('&');
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    // console.log(name);
+    // console.log(search);
+
+    // function fetchMessages() {
+    //   // let get = localStorage.getItem('order');
+    //   // console.log(get);
+    //   fetch('https://ewhlocal.ewallhost.com/windows-vps-hosting')
+    //     .then(response => response.json())
+    //     .then(data => console.log(data))
+    //     .catch(error => console.error('Error:', error));
+    // }
+
+    // // Fetch messages periodically (e.g., every 5 seconds)
+    // setInterval(fetchMessages, 5000);
+
+    // // Fetch messages immediately when the page loads
+    // fetchMessages();
+  </script>
+
+
+
+
+
+  <!--  featured des 4  -->
+  <section class="featured-des-4">
+    <div class="container">
+      <h2 class="site-title centered">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+        <span class="site__txt">why choose us</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+      </h2>
+      <div class="featured-des-4__items">
+        <div class="featured-des-4__item">
+          <div class="featured-des-4__icon">
+            <img src="image/SVG/why/ease-use.svg" class="featured-des-4__img" width="150" height="150" loading="lazy"
+              alt="Customizable">
+          </div>
+          <div class="featured-des-4__head">Chat Support & Emergency Helpline</div>
+          <div class="featured-des-4__desc">Cloud Storage ensures that your specific needs are met. Your theme can be
+            customized here to match your business identity, your own authentication system, and other apps when
+            needed..</div>
+        </div>
+        <div class="featured-des-4__item">
+          <div class="featured-des-4__icon">
+            <img src="image/SVG/why/ease-use.svg" class="featured-des-4__img" width="150" height="150" loading="lazy"
+              alt="
+                Quick Configuration">
+          </div>
+          <div class="featured-des-4__head">
+            Quick Configuration</div>
+          <div class="featured-des-4__desc">The configuration for Cloud Storage can be done either by app or web. For
+            synchronization, if you have a folder, from your end itself, you can automatically synchronize your file
+            from your device to Cloud Storage.</div>
+        </div>
+        <div class="featured-des-4__item">
+          <div class="featured-des-4__icon">
+            <img src="image/SVG/why/ease-use.svg" class="featured-des-4__img" width="150" height="150" loading="lazy"
+              alt="Backups">
+          </div>
+          <div class="featured-des-4__head">High-Security Infrastructure</div>
+          <div class="featured-des-4__desc">Where Cloud Storage has a RAID-based storage backend and an automatic backup
+            system, you can rest assured that all your databases and storage will be backed up several times to prevent
+            data loss.</div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!--  END featured des 4  -->
+
+  <!--  featured des 2  -->
+  <section class="featured-des-2">
+    <div class="container">
+      <h2 class="site-title centered">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+        <span class="site__txt">our features</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+      </h2>
+      <div class="featured-des-2__items">
+        <div class="featured-des-2__item">
+          <div class="featured-des-2__icon">
+            <img src="image/SVG/why/web-migration.svg" class="featured-des-2__img" width="150" height="150"
+              loading="lazy" alt="Customizable">
+          </div>
+          <div class="featured-des-2__head">Chat Support & Emergency Helpline</div>
+          <div class="featured-des-2__desc">Cloud Storage ensures that your specific needs are met. Your theme can be
+            customized here to match your business identity, your own authentication system, and other apps when
+            needed..</div>
+        </div>
+        <div class="featured-des-2__item">
+          <div class="featured-des-2__icon">
+            <img src="image/SVG/why/ease-use.svg" class="featured-des-2__img" width="150" height="150" loading="lazy"
+              alt="
+                Quick Configuration">
+          </div>
+          <div class="featured-des-2__head">
+            Quick Configuration</div>
+          <div class="featured-des-2__desc">The configuration for Cloud Storage can be done either by app or web. For
+            synchronization, if you have a folder, from your end itself, you can automatically synchronize your file
+            from your device to Cloud Storage.</div>
+        </div>
+        <div class="featured-des-2__item">
+          <div class="featured-des-2__icon">
+            <img src="image/SVG/why/low-cost-hosting.svg" class="featured-des-2__img" width="150" height="150"
+              loading="lazy" alt="Backups">
+          </div>
+          <div class="featured-des-2__head">High-Security Infrastructure</div>
+          <div class="featured-des-2__desc">Where Cloud Storage has a RAID-based storage backend and an automatic backup
+            system, you can rest assured that all your databases and storage will be backed up several times to prevent
+            data loss.</div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!--  END featured des 2  -->
+
+  <style>
+    /*  featured des 2  */
+    .featured-des-2 {
+      padding: 100px 0;
+
+      & .featured-des-2__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* column-gap: 30px; */
+        row-gap: 50px;
+
+        & .featured-des-2__item {
+          /* width: calc(100% / 3 - 20px); */
+          width: calc(100% * (1/3) - 60px);
+          margin: 0 30px;
+          text-align: center;
+          transition: all 0.2s ease;
+          cursor: pointer;
+
+          & .featured-des-2__icon {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border: 10px solid #EEF4F2;
+            background: transparent;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 500ms ease;
+
+            & .featured-des-2__img {
+              width: 110px;
+              height: auto;
+            }
+          }
+
+
+          & .featured-des-2__head {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 10px 0;
+            color: #013162;
+          }
+
+          & .featured-des-2__desc {
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: justify;
+          }
+
+          &:hover {
+            &:nth-child(1) {
+              & .featured-des-2__icon {
+                background-color: #a9ca9c;
+                border-color: #e4f1df;
+              }
+            }
+
+            &:nth-child(2) {
+              & .featured-des-2__icon {
+                background-color: #c4a7cf;
+                border-color: #f3e9f7;
+              }
+            }
+
+            &:nth-child(3) {
+              & .featured-des-2__icon {
+                background-color: #a1bcce;
+                border-color: #e7f2fa;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            & .featured-des-2__icon {
+              border-color: #a9ca9c;
+            }
+          }
+
+          &:nth-child(2) {
+            & .featured-des-2__icon {
+              border-color: #c4a7cf;
+            }
+          }
+
+          &:nth-child(3) {
+            & .featured-des-2__icon {
+              border-color: #a1bcce;
+            }
+          }
+
+
+        }
+      }
+
+      @media only screen and (max-width:992px) {
+        & .featured-des-2__items .featured-des-2__item {
+          width: calc(100% * (1/2) - 40px);
+          margin: 0 20px;
+        }
+      }
+
+      @media only screen and (max-width:768px) {
+        & .featured-des-2__items .featured-des-2__item {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+
+    /*  END featured des 2  */
+  </style>
+
+  <!--  featured des 3  -->
+  <section class="featured-des-3">
+    <div class="container">
+      <h2 class="site-title centered">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+        <span class="site__txt">why choose us</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+      </h2>
+      <div class="featured-des-3__items">
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="image/SVG/why/ease-use.svg" class="featured-des-3__img" width="150" height="150" loading="lazy"
+              alt="Customizable">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Chat Support & Emergency Helpline</div>
+            <div class="featured-des-3__desc">Cloud Storage ensures that your specific needs are met. Your theme can be
+              customized here to match your business identity, your own authentication system, and other apps when
+              needed..</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="image/SVG/why/email-accounts.svg" class="featured-des-3__img" width="150" height="150"
+              loading="lazy" alt="
+                Quick Configuration">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">
+              Quick Configuration</div>
+            <div class="featured-des-3__desc">The configuration for Cloud Storage can be done either by app or web. For
+              synchronization, if you have a folder, from your end itself, you can automatically synchronize your file
+              from your device to Cloud Storage.</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="image/SVG/why/free-ssl.svg" class="featured-des-3__img" width="150" height="150" loading="lazy"
+              alt="Backups">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">High-Security Infrastructure</div>
+            <div class="featured-des-3__desc">Where Cloud Storage has a RAID-based storage backend and an automatic
+              backup
+              system, you can rest assured that all your databases and storage will be backed up several times to
+              prevent
+              data loss.</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="image/SVG/why/seo.svg" class="featured-des-3__img" width="150" height="150" loading="lazy"
+              alt="Backups">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">High-Security Infrastructure</div>
+            <div class="featured-des-3__desc">Where Cloud Storage has a RAID-based storage backend and an automatic
+              backup
+              system, you can rest assured that all your databases and storage will be backed up several times to
+              prevent
+              data loss.</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!--  END featured des 3  -->
+
+  <style>
+    /*  featured des 3  */
+    .featured-des-3 {
+      padding: 100px 0;
+
+      & .featured-des-3__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* column-gap: 30px; */
+        row-gap: 50px;
+
+        & .featured-des-3__item {
+          width: calc(100% * (1/2) - 40px);
+          margin: 0 20px;
+          border-radius: 5px;
+          display: flex;
+
+          text-align: start;
+          transition: all 0.2s ease;
+          cursor: pointer;
+
+          & .featured-des-3__icon {
+            position: relative;
+            border: 5px solid #ffc4c4;
+            /* background-color: #fff7f7; */
+            border-radius: 10px;
+            padding: 10px;
+            height: fit-content;
+            transform: scale(.84) translateX(15%) rotateZ(-11deg);
+            transform-origin: 0 100%;
+            transition: transform 0.4s ease-out;
+
+            & .featured-des-3__img {
+              width: 120px;
+              height: auto;
+              object-fit: cover;
+              transform: scale(1.3) rotateZ(11deg);
+              transition: transform 0.2s ease-out;
+            }
+
+            &::before {
+              content: '';
+              /* display: inline-block; */
+              position: absolute;
+              bottom: -22%;
+              left: -46%;
+              width: 200px;
+              height: 20px;
+              background: url('./image/dark.png') no-repeat center;
+              background-size: 100% auto;
+              /* background: linear-gradient(to top,rgb(247, 247, 247),rgb(250, 250, 250));
+              box-shadow: 0 5px 10px #9f9f9f; */
+              transform: rotateZ(10deg);
+              opacity: 1;
+              transition: opacity 0.3s ease;
+            }
+          }
+
+          & .featured-des-3__content {
+            padding-left: 15px;
+
+            & .featured-des-3__head {
+              font-family: "Montserrat", sans-serif;
+              font-size: calc(16px + .7vw);
+              font-weight: 600;
+              padding: 10px 0;
+              color: #333;
+            }
+
+            & .featured-des-3__desc {
+              font-size: 1rem;
+              line-height: 1.8;
+              /* line-height: calc(1.5em + .3vw); */
+            }
+
+          }
+
+
+
+          &:hover {
+            & .featured-des-3__icon {
+              transform: scale(.84) translateX(15%) rotateZ(0deg);
+
+              &::before {
+                opacity: 0;
+              }
+            }
+
+            & .featured-des-3__img {
+              transform: scale(1.2) rotateZ(0deg);
+            }
+          }
+
+        }
+      }
+
+
+      @media only screen and (max-width:992px) {
+        & .featured-des-3__items .featured-des-3__item {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      @media only screen and (max-width:768px) {
+        & .featured-des-3__img {
+          width: 60px !important;
+        }
+      }
+    }
+
+    /*  END featured des 3  */
+  </style>
+
+
+  <!--  featured des 5  -->
+  <section class="featured-des-5">
+    <div class="container">
+      <h2 class="featured-des-5__title">
+        We Specialize In Automating The Solutions
+      </h2>
+      <div class="featured-des-5__items-wrapper">
+
+        <div class="featured-des-5__items">
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Full System Administration</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Weekly Backup</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Public Cloud Hosting</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              24X7 Server Monitoring</span>
+          </div>
+        </div>
+        <div class="featured-des-5__items">
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              Control Panel Access</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              Complete Server Configuration</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Server Traffic Monitor</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              Firewall Network Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END featured des 5 -->
+
+  <!-- suggestion block -->
+  <section class="suggestion-block">
+    <div class="container suggestion-block__reverse">
+      <div class="suggestion-block__content-wrapper">
+        <div class="suggestion-block__icon">
+          <i class="fa-solid fa-wand-magic-sparkles one"></i>
+        </div>
+        <p class="suggestion-block__title">
+          Your Complete Server Expert
+        </p>
+        <p class="suggestion-block__txt">
+          cPanel is one of the popular web hosting control panels used on a Linux
+          hosting environment. It gives a simple and easy-to-use Graphical User
+          Interface to manage your website.
+        </p>
+        <p class="suggestion-block__txt">
+          Our Cheap Linux hosting plans come with cPanel and Apache server
+          configuration. You don’t have to install any software, as cPanel can be
+          accessed using a web browser. This configuration is powered by
+          CloudLinux OS which provides a secure and efficient shared hosting
+          environment.
+        </p>
+        <p class="suggestion-block__txt">
+          <b>Our server specialists take care of server issues including:</b>
+        </p>
+        <ul class="suggestion-block__list">
+          <li class="suggestion-block__list-item">
+            File Manager to access your website files
+          </li>
+          <li class="suggestion-block__list-item">FTP Accounts and Web Disk</li>
+          <li class="suggestion-block__list-item">
+            Domain related functionalities like creating Add-on domains and
+            Subdomains
+          </li>
+          <li class="suggestion-block__list-item">Accessing Database</li>
+          <li class="suggestion-block__list-item">Adding CronJobs</li>
+        </ul>
+      </div>
+      <div class="suggestion-block__img-wrapper">
+        <img class="suggestion-block__img" src="image/SVG/transfer-it.svg" alt="transfer-it" width="150px"
+          height="150px">
+      </div>
+    </div>
+  </section>
+
+  <section class="suggestion-block">
+    <div class="container">
+      <div class="suggestion-block__img-wrapper">
+        <img class="suggestion-block__img" src="image/SVG/web-server.svg" alt="transfer-it" width="150px"
+          height="150px">
+      </div>
+      <div class="suggestion-block__content-wrapper">
+        <div class="suggestion-block__icon">
+          <i class="fa-solid fa-meteor two"></i>
+        </div>
+        <p class="suggestion-block__title">
+          Struggling with Server Management Tasks
+        </p>
+        <p class="suggestion-block__txt">
+          MilesWeb provides proactive server management services that incorporate 24x7 server monitoring and maintenance
+          for all types of online businesses and service providers. Our server management team has expertise in
+          Dedicated, VPS and Cloud Platform (eg AWS, Google Cloud) that operates on Linux or Windows operating systems.
+          In case you do not see your technology or type of business listed in our plans, you can contact us and we will
+          create an affordable, customized and relevant plan for you.
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <!-- suggestion block END -->
+
+  <!--  FAQ s  -->
+  <section class="faQ">
+    <div class="container">
+      <div class="faQ__title">
+        <h2 class="site-title centered">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+              <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            </svg></span>
+          <span class="site__txt">Faq's</span>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+              <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            </svg></span>
+        </h2>
+      </div>
+
+      <div class="faQ__accordion">
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">Do you offer server monitoring services?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">
+              Both of our Essential and Empowered server management services include 24x7 proactive server monitoring.
+              We
+              will monitor all common ports as well as custom ports of your choosing for connectivity and intervene
+              within
+              15 minutes in the event an outage is detected.</div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">How does Cloud Storage work?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">
+              <ul>
+                <li>It uses remote servers to store data such as files, videos, images, etc. When users upload their
+                  data
+                  through an internet connection, it will be stored on a virtual machine on a physical server.</li>
+                <li>The Cloud Storage provider will create a new virtual server to meet the demand for growing storage
+                  needs. This allows users to access files anytime and anywhere.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">Why should I use eWallHost as a Cloud Storage service?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">Whether you are an individual or a business owner, eWallHost guarantees a
+              secure data storage solution. So, you can store, share, and edit your entire data without worrying about
+              security or costs. Our experienced technical team is here to handle all your queries and ensure that you
+              get
+              the most secure and satisfactory Cloud Storage services.</div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What are the advantages of Cloud Storage?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">
+              <ul>
+                <li>Some of the advantages of Cloud Storage are that you can access your files from anywhere with a
+                  continuous internet connection, and it acts as a backup solution for your local storage on physical
+                  drives.</li>
+                <li>If you are buying these Cloud Storage services for your business, it is ideal to collaborate on
+                  documents and files. In addition, it is highly scalable, allowing you to expand or reduce data
+                  according
+                  to your needs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">How much storage space is available in the cloud?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">eWallHost Cloud Storage will offer you 1 TB of storage; if you need more
+              storage, you can pay extra and enjoy hassle-free storage.</div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What are the different protocols that can be used to access a storage box?
+          </div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">
+              Protocols such as FTP, SFTP, SCP, and RSYNC will allow you to access and
+              manage your storage box. In addition, you can easily integrate them into your own file system through
+              WebDAV
+              or Samba.
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Add more sections as needed -->
+      </div>
+
+    </div>
+  </section>
+  <!--  END FAQ s  -->
+  <style>
+    /* faQ */
+    .faQ__accordion {
+      width: 900px;
+      margin: 50px auto;
+
+      & .faQ__accordion-item {
+        padding: 20px;
+        border-top: 1px solid rgb(228, 228, 228);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s all;
+
+
+        & .faQ__accordion-header {
+          position: relative;
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #333;
+        }
+
+        & .faQ__accordion-header::before {
+          content: '\002B';
+          display: inline-block;
+          font-size: 20px;
+          color: #ee3d75;
+          font-weight: bold;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+        }
+
+
+        &.active .faQ__accordion-header::before {
+          content: '\2212';
+        }
+
+        &:hover {
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.106);
+        }
+
+        & .faQ__accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+
+          & .faQ_accordion-txt {
+            padding: 15px 0 15px 30px;
+
+            & ul {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+
+      }
+
+      @media only screen and (max-width:992px) {
+        & {
+          width: 100%;
+        }
+      }
+    }
+
+    /* END faQ */
+  </style>
+
+  <!-- contact us -->
+  <section class="contact-wrapper">
+    <div class="container">
+      <div class="row contact-row">
+        <div class="col-lg-6 contact-col">
+          <div class="contact-form">
+            <h3 class="contact-head">
+              Connect With Us.
+            </h3>
+            <div class="contact_form">
+              <form action="" method="post">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form_input" placeholder="Name*" name="">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form_input" placeholder="Email*" name="">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form_input" placeholder="Mobile*" name="">
+                  </div>
+                  <div class="col-sm-12">
+                    <textarea name="" id="" class="form_text-area" placeholder="Message*" rows="5"></textarea>
+                  </div>
+                  <div>
+                    <button class="btn-normal">Send Enquiry</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 contact-col">
+          <div class="contact-details">
+            <h3 class="contact-head">
+              Get in Touch
+            </h3>
+            <p class="contact-subhead">
+              We’d love to resolve your queries with personalized assistance.
+            </p>
+            <div class="contact-info">
+              <div class="contact-info__items">
+                <div class="contact-info__item">
+                  <span class="contact-info__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  <span class="contact-info__txt">
+                    No.763, 1st Floor,
+                    Velachery Main Road,
+                    Selaiyur, Chennai - 600073
+                  </span>
+                </div>
+                <div class="contact-info__item">
+                  <span class="contact-info__icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                  </span>
+                  <span class="contact-info__txt">
+                    +91 96550 05757
+                  </span>
+                </div>
+                <div class="contact-info__item">
+                  <span class="contact-info__icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <span class="contact-info__txt">
+                    contact@ewallhost.com
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END contact us -->
+
+  <!-- footer -->
+  <footer class="footer-wrap">
+    <div class="footer-text">
+      Copyright © 2024 eWallHost Web Services Pvt. Ltd..All Rights Reserved
+    </div>
+  </footer>
+  <!-- END footer -->
+
+
+
+
+  <script>
+    // <!-- faQ accordion  -->
+    const accordian = document.querySelectorAll('.faQ__accordion-item');
+    // console.log(accordian);
+    accordian.forEach(function (accord) {
+      accord.addEventListener('click', function (item) {
+        this.classList.toggle('active')
+        const content = accord.querySelector('.faQ__accordion-content');
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+
+      })
+    })
+
+    // Calculate and update the width of the line on scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollingLine = document.querySelector(".navbar .scrolling-line");
+      console.log(scrollingLine);
+
+      document.addEventListener("scroll", function () {
+        const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        const lineWidth = (scrollPercentage / 100) * window.innerWidth;
+        scrollingLine.style.width = `${lineWidth}px`;
+      });
+    });
+  </script>
+</body>
+
+</html>

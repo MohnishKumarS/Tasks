@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket API</title>
+</head>
+<body>
+
+
+  <script>
+    async function fetchBoard(){
+      // const API = "https://api.cricapi.com/v1/matches?apikey=f13f4170-5cf2-4bc6-82fd-1a375407c5c0&id=76ae85e2-88e5-4e99-83e4-5f352108aebc&offset=0&search=indian-premier-league ";
+      // const API = "https://api.cricapi.com/v1/match_scorecard?apikey=f13f4170-5cf2-4bc6-82fd-1a375407c5c0&id=849bd6f6-09fb-473a-a4ad-2c6617c857ea";
+      // const API = "https://api.cricapi.com/v1/matches?apikey=f13f4170-5cf2-4bc6-82fd-1a375407c5c0&offset=0&search=IPL";
+      const url = 'https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '37088127bdmshcca6eb1127af18bp152f13jsne826bd0aa60f',
+		'X-RapidAPI-Host': 'cricbuzz-cricket.p.rapidapi.com'
+	}
+};
+     try {
+      const res = await fetch(url,options);
+      if(!res.ok){
+        throw new Error("Could not fetch")
+      }
+      const data = await res.json();
+      console.log(data);
+     } catch (error) {
+      console.error('unable to fetch data',error);
+     }
+
+    }
+    fetchBoard();
+  </script>
+  
+</body>
+</html>

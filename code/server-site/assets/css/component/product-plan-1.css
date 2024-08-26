@@ -1,0 +1,133 @@
+/* product plan */
+.product-plans {
+  padding: 100px 0;
+  background: url('../../image/common/about-bg.png') no-repeat bottom left;
+  background-size: auto;
+
+  & .plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 40px;
+
+    & .plan {
+      flex: 1 1;
+      max-width: 310px;
+      min-width: 300px;
+      padding: 20px 15px;
+      background: #fff;
+      border: 1px solid transparent;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: translateY(0);
+      transition: all 0.3s ease-in-out;
+
+      & .plan__header {
+        text-align: center;
+
+        & .plan__name {
+          color: #7093bb;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 0;
+          text-transform: uppercase;
+        }
+      }
+
+      & .plan__price {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+
+        & .price-curr {
+          font-weight: 700;
+          align-self: self-start;
+        }
+
+        & .price-amount {
+          font-size: 3rem;
+          font-weight: 700;
+          line-height: 0.7;
+          margin: 0 4px;
+        }
+
+        & .price-pack {
+          width: 100%;
+          padding-top: 10px;
+          color: #a7a7a7;
+
+        }
+      }
+
+      & .plan__spec {
+        & .plan__spec-feature {
+          padding: 10px 0;
+          font-size: 1rem;
+          border-bottom: 1px dotted #dbdbdb;
+
+          &:last-child{
+            border-bottom: none;
+          }
+
+          & .plan__spec-txt {
+            margin-left: 5px;
+          }
+
+          &::before {
+            content: url('../../image/common/tick.svg');
+            display: inline-block;
+            width: 1rem;
+            vertical-align: text-top;
+          }
+        }
+      }
+
+      & .plan__order-btn {
+        text-align: center;
+
+        & .btn-main {
+          width: 100%;
+        }
+      }
+
+    }
+
+    & .plan:nth-child(1) {
+      border-top-width: 10px;
+      border-color: #ffd0d0;
+
+      &:hover {
+        box-shadow: 0px 0px 5px 8px #fff1f1;
+      }
+    }
+
+    & .plan:nth-child(2) {
+      border-top-width: 10px;
+      border-color: #aadaff;
+
+      &:hover {
+        box-shadow: 0px 0px 5px 8px #e7f5ff;
+      }
+    }
+
+    & .plan:nth-child(3) {
+      border-top: 10px solid #d0ebff;
+      border-color: #d0ebff;
+    }
+
+  }
+}
+
+.product-plans-links {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+/* End product plan */

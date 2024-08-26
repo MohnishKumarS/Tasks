@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  link
+</head>
+
+<body>
+  <div id="root"></div>
+  <div class="container">
+    <div class="c-panel-des_body">
+      <div class="c-panel-des__dns-ips">
+        <h2 class="c-panel-des__title sec-title center">Public Network</h2>
+        <div class="comparision-table-wrapper">
+          <table class="comparision-table">
+            <thead>
+              <tr class="comparision-table__heading">
+                <th scope="col" class="comparision-table__heading-data">PRIMARY IP</th>
+                <th scope="col" class="comparision-table__heading-data">PROTOCOL</th>
+                <th scope="col" class="comparision-table__heading-data">REVERSE DNS</th>
+                <th scope="col" class="comparision-table__heading-data">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="comparision-table__feature">
+                <td scope="row" class="comparision-table__feature-data">195.93.1.32</td>
+                <td class="comparision-table__feature-data">IPv4</td>
+                <td class="comparision-table__feature-data">static.83.34.102.222.clients.your-server</td>
+                <td><button type="button" data-toggle="modal" data-target="#myModalReverseDns">Edit</button></td>
+              </tr>
+              <tr class="comparision-table__feature">
+                <td scope="row" class="comparision-table__feature-data">2002:0de6:0001:0042:0100:8c2e:0370:7234</td>
+                <td class="comparision-table__feature-data">IPv6</td>
+                <td class="comparision-table__feature-data">0 Entries</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+      <div class="c-panel-des__rebuild-block">
+        <h2 class="c-panel-des__title sec-title center">Rebuilt</h2>
+        <p>Rebuilding your server will power it off and overwrite its disk with the image the select</p>
+        <p>All previous data on the disk will be lost!</p>
+
+        <!-- <div class="c-panel-des__rebuilt">
+          <div class="e-dropdown js-e-dropdown" tabindex="1">
+            <div class="select">
+              <i class="fa fa-chevron-down e-dropdown-icon"></i>
+              <div class="js-dropdown_selected selected-item">
+                <span data-continent="all">All</span>
+              </div>
+            </div>
+            <ul class="e-dropdown-menu" style="display: none;">
+              <li class="e-dropdown_item"><span data-continent="all">All</span></li>
+              <li class="e-dropdown_item"><span data-continent="europe">Europe</span></li>
+              <li class="e-dropdown_item"><span data-continent="northamerica">Northamerica</span></li>
+              <li class="e-dropdown_item"><span data-continent="asia">Asia</span></li>
+              <li class="e-dropdown_item"><span data-continent="africa">Africa</span></li>
+              <li class="e-dropdown_item"><span data-continent="oceania">Oceania</span></li>
+              <li class="e-dropdown_item"><span data-continent="europe">Europe</span></li>
+              <li class="e-dropdown_item"><span data-continent="northamerica">Northamerica</span></li>
+              <li class="e-dropdown_item"><span data-continent="asia">Asia</span></li>
+              <li class="e-dropdown_item"><span data-continent="africa">Africa</span></li>
+              <li class="e-dropdown_item"><span data-continent="oceania">Oceania</span></li>
+              <li class="e-dropdown_item"><span data-continent="europe">Europe</span></li>
+              <li class="e-dropdown_item"><span data-continent="northamerica">Northamerica</span></li>
+              <li class="e-dropdown_item"><span data-continent="asia">Asia</span></li>
+              <li class="e-dropdown_item"><span data-continent="africa">Africa</span></li>
+              <li class="e-dropdown_item"><span data-continent="oceania">Oceania</span></li>
+            </ul>
+          </div>
+          <div class="c-panel-des__rebuilt-btn">
+            <button class="btn-normal">Rebuilt</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<label class="form-label">IP Address</label>
+<label class="form-label">rDNS Hostname</label>
+<script>
+  const rebuildPicked = {
+  "id": "centos-stream-9",
+  "provd_name": "centos-stream-9",
+  "provd_desc": "CentOS Stream 9",
+  "name": "centos",
+  "full_name": "CentOS Stream 9",
+  "version": "Stream 9"
+}
+  const rebuildList = [
+  {
+    "id": "ubuntu-20.04",
+    "provd_name": "ubuntu-20.04",
+    "provd_desc": "Ubuntu 20.04",
+    "name": "ubuntu",
+    "full_name": "Ubuntu 20.04",
+    "version": "20.04"
+  },
+  {
+    "id": "debian-11",
+    "provd_name": "debian-11",
+    "provd_desc": "Debian 11",
+    "name": "debian",
+    "full_name": "Debian 11",
+    "version": "11"
+  },
+  {
+    "id": "rocky-8",
+    "provd_name": "rocky-8",
+    "provd_desc": "Rocky Linux 8",
+    "name": "rocky",
+    "full_name": "Rocky Linux 8",
+    "version": "8"
+  },
+  {
+    "id": "centos-stream-9",
+    "provd_name": "centos-stream-9",
+    "provd_desc": "CentOS Stream 9",
+    "name": "centos",
+    "full_name": "CentOS Stream 9",
+    "version": "Stream 9"
+  },
+  {
+    "id": "ubuntu-22.04",
+    "provd_name": "ubuntu-22.04",
+    "provd_desc": "Ubuntu 22.04",
+    "name": "ubuntu",
+    "full_name": "Ubuntu 22.04",
+    "version": "22.04"
+  },
+  {
+    "id": "rocky-9",
+    "provd_name": "rocky-9",
+    "provd_desc": "Rocky Linux 9",
+    "name": "rocky",
+    "full_name": "Rocky Linux 9",
+    "version": "9"
+  },
+  {
+    "id": "alma-8",
+    "provd_name": "alma-8",
+    "provd_desc": "AlmaLinux 8",
+    "name": "alma",
+    "full_name": "AlmaLinux 8",
+    "version": "8"
+  },
+  {
+    "id": "alma-9",
+    "provd_name": "alma-9",
+    "provd_desc": "AlmaLinux 9",
+    "name": "alma",
+    "full_name": "AlmaLinux 9",
+    "version": "9"
+  }
+]
+  let html = '';
+               if(true){
+
+html += `<div class="c-panel-des__rebuild-block">
+<h2 class="c-panel-des__title sec-title center">Rebuilt</h2>
+<p>Rebuilding your server will power it off and overwrite its disk with the image the select</p>
+<p>All previous data on the disk will be lost!</p>
+
+<div class="c-panel-des__rebuilt">
+  <div class="e-dropdown js-e-dropdown" tabindex="1">
+    <div class="select">
+      <i class="fa fa-chevron-down e-dropdown-icon"></i>
+      <div class="js-dropdown_selected selected-item">
+        <span data-rebuild="${rebuildPicked.id}">${rebuildPicked.provd_desc}</span>
+      </div>
+    </div>
+    <ul class="e-dropdown-menu" style="display: none;">`;
+      for (const key in rebuildList) {
+        if (!Object.hasOwnProperty.call(rebuildList, key)) continue;
+          const element = rebuildList[key];
+          console.log(element);
+        html += `<li class="e-dropdown_item"><span data-rebuild="${element.id}">${element.provd_desc}</span></li>`;
+      }
+ html += `</ul>
+  </div>
+  <div class="c-panel-des__rebuilt-btn">
+    <button class="btn-normal rebuilt-submit">Rebuilt</button>
+  </div>
+</div>
+</div>`;
+}
+document.getElementById('root').innerHTML = html;
+</script>
+
+</body>
+
+</html>
+
+<style>
+  .c-panel-des__rebuilt {
+    display: flex;
+  }
+
+  .e-dropdown {
+    flex: 2 1;
+  }
+
+  .c-panel-des__rebuilt-btn {
+    flex: 1 1;
+    text-align: center;
+  }
+
+  .c-panel-des__dns-ips .comparision-table-wrapper {
+    overflow-x: auto;
+    padding-bottom: 0;
+    scrollbar-width: thin
+  }
+</style>
+
+<script>
+  const dropdown = document.querySelector('.js-e-dropdown');
+  const dropdownMenu = document.querySelector('.e-dropdown-menu');
+  const selectedItem = document.querySelector('.js-dropdown_selected');
+  const dropdownItems = document.querySelectorAll('.e-dropdown_item');
+  const rebuiltSubmitBtn = document.querySelector('.c-panel-des__rebuilt-btn .rebuilt-submit');
+  // console.log(dropdownItems);
+
+  dropdown.addEventListener('click', function () {
+    this.classList.toggle('active')
+    dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
+  })
+
+  for (const key in dropdownItems) {
+    if (!Object.hasOwnProperty.call(dropdownItems, key)) continue;
+    const item = dropdownItems[key];
+
+    item.addEventListener('click', function () {
+      const clickedItem = this.querySelector('span[data-rebuild]');
+      selectedItem.innerHTML = clickedItem.outerHTML;
+    })
+  }
+
+  document.addEventListener('click', function (e) {
+    // console.log(e.target);
+    if (!dropdown.contains(e.target)) {
+      dropdownMenu.style.display = 'none';
+      dropdown.classList.remove('active');
+    }
+  })
+
+  rebuiltSubmitBtn.addEventListener('click', function () {
+    console.log('Rebuilt');
+    const rebuildSelected = selectedItem.querySelector('span[data-rebuild]');
+    const rebuildID = rebuildSelected.getAttribute('data-rebuild')
+    console.log(rebuildID);
+
+    const sendData = FetchAPI.data({
+      action:"update",
+      type:"rebuild",
+      data:{
+        image:3,
+        // product_id:this.#productId,
+        service_id:ewall_service_id
+      }
+    })
+
+    fetch("/api/clientserver/",sendData)
+    .then(res => res.json())
+    .then(resData => {
+      console.log(resData)
+    })
+  })
+</script>
+
+
+<style>
+  .e-dropdown {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #d5d9dd;
+    font-size: 14px;
+    color: #474747;
+    text-align: left;
+  }
+
+  .e-dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 5px 10px
+  }
+
+  .e-dropdown .select i {
+    font-size: .9em;
+    color: #888;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 27px
+  }
+
+  .e-dropdown .select .selected-item {
+    position: relative
+  }
+
+  .e-dropdown .select .selected-item .discount-percent {
+    position: absolute;
+    right: -10px;
+    bottom: 2px;
+    font-size: .75rem;
+    background: #26b594;
+    color: #ffffff;
+    padding: 2px 15px
+  }
+
+  .e-dropdown .select .selected-item .discount-percent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 12px solid transparent;
+    border-left: 8px solid #ffffff;
+    border-bottom: 12px solid transparent
+  }
+
+  .e-dropdown .select .selected-item .selling-price {
+    font-size: .9rem
+  }
+
+  .e-dropdown .select .selected-item .selling-price .price {
+    font-size: 1.2rem;
+    font-weight: 500
+  }
+
+  .e-dropdown .select .selected-item .original-price {
+    font-size: 1rem
+  }
+
+  .e-dropdown .select .selected-item .original-price strike {
+    color: #e36363
+  }
+
+  .e-dropdown:hover {
+    border-color: #d5d9dd
+  }
+
+  .e-dropdown.active i {
+    transform: rotate(-180deg)
+  }
+
+  .e-dropdown.active:hover,
+  .e-dropdown.active {
+    border-radius: 5px 5px 0 0
+  }
+
+  .e-dropdown .e-dropdown-menu {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 0 1px #454d54;
+    border-radius: 0 1px 5px 5px;
+    overflow: hidden;
+    display: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    z-index: 1000;
+    padding: 0;
+    list-style: none;
+  }
+
+  .e-dropdown .e-dropdown-menu li {
+    position: relative;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    border-top: 1px solid #f7f7f7
+  }
+
+  .e-dropdown .e-dropdown-menu li .discount-percent {
+    position: absolute;
+    right: -10px;
+    bottom: 10px;
+    font-size: .75rem;
+    background: #26b594;
+    color: #ffffff;
+    padding: 2px 15px
+  }
+
+  .e-dropdown .e-dropdown-menu li .discount-percent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 12px solid transparent;
+    border-left: 8px solid #ffffff;
+    border-bottom: 12px solid transparent
+  }
+
+  .e-dropdown .e-dropdown-menu li .selling-price {
+    font-size: .9rem
+  }
+
+  .e-dropdown .e-dropdown-menu li .selling-price .price {
+    font-size: 1.2rem;
+    font-weight: 500
+  }
+
+  .e-dropdown .e-dropdown-menu li .original-price {
+    font-size: 1rem
+  }
+
+  .e-dropdown .e-dropdown-menu li .original-price strike {
+    color: #e36363
+  }
+
+  .e-dropdown .e-dropdown-menu li:first-of-type {
+    border-top-width: 0
+  }
+
+  .e-dropdown .e-dropdown-menu li:hover:hover {
+    background-color: #f7f7f7
+  }
+
+  .e-dropdown .e-dropdown-menu li:hover:active {
+    background-color: #f7f7f7
+  }
+
+  @media only screen and (max-width:425px) {
+    .e-dropdown .select {
+      padding: 0;
+    }
+  }
+</style>
+<STYle>
+  .comparision-table-wrapper {
+    overflow-x: scroll;
+    padding-bottom: 100px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .comparision-table-wrapper::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+  }
+
+  .comparision-table {
+    width: 100%;
+  }
+
+  .comparision-table .comparision-table__heading {
+    background: #d5d9dd;
+  }
+
+  .comparision-table .comparision-table__heading .comparision-table__heading-data {
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: #214e83;
+  }
+
+  .comparision-table .comparision-table__feature {
+    background: #ffffff;
+  }
+
+  .comparision-table .comparision-table__feature:nth-of-type(odd) {
+    background: #f7f7f7;
+  }
+
+  .comparision-table .comparision-table__feature:nth-of-type(even) {
+    background: #ffffff;
+  }
+
+  .comparision-table .comparision-table__feature .comparision-table__feature-data {
+    padding: 10px 10px;
+    font-size: 1rem;
+  }
+
+  .comparision-table .comparision-table__feature .comparision-table__feature-data:first-of-type {
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width:425px) {
+    .comparision-table .comparision-table__feature .comparision-table__feature-data {
+      font-size: 0.8rem;
+    }
+  }
+</STYle>

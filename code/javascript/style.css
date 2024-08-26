@@ -1,0 +1,219 @@
+.sec-title{
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #454d54;
+  }
+  .sec-title::after {
+content: '';
+position: absolute;
+bottom: -10px;
+left: 0;
+width: 60px;
+height: 2px;
+background: #214e83;
+}
+
+.sec-title.center::after {
+left: 50%;
+transform: translateX(-50%);
+}
+a{
+    text-decoration: none;
+}
+.info-block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+  
+  .info-block__title {
+    color: #1f8ac0;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .text-center {
+    margin-top: 15px;
+  }
+  
+  .info-block__body {
+    font-family: "Montserrat", sans-serif;
+    width: 70%;
+    border-radius: 12px;
+    z-index: 1;
+    margin: auto;
+    background: white;
+    color: #454d54;
+    font-weight: 500;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgb(51 51 51 / 25%);
+  }
+  
+  .info-block__body_item {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(240 244 247);
+  }
+  
+  .info-block__body_item.left-right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .info-block__body_item_left {
+    flex: 1.5;
+    position: relative;
+    padding-right: 32px;
+  }
+  
+  .info-block__body_item_left:after {
+    content: ":";
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-weight: 700;
+  }
+  
+  .info-block__body_item_right {
+    flex: 1.5;
+    padding-left: 22px;
+  }
+  
+  .info-block__body_item .btn-normal {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+  }
+  
+  .info-block__body_item .btn-call-to {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+  }
+  
+  .info-block .alert {
+    box-shadow: none;
+  }
+  
+  .info-block .e-input {
+    width: 100%;
+  }
+  
+  .info-block.hidden {
+    display: none;
+  }
+  
+  .alert-wrapper {
+    margin-bottom: 50px;
+  }
+
+
+
+  /* ----- c-panel --- */
+  body {
+    background: #f0f4f7 !important;
+    margin-top: 100px;
+}
+
+.c-panel-des_body {
+    background-color: #fff !important;
+    font-family: Montserrat, sans-serif;
+    border-radius: 5px;
+    z-index: 1;
+    color: #454d54;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 25px;
+    margin-bottom: 50px;
+    /* box-shadow: 0 2px 5px rgb(51 51 51 / 25%); */
+}
+
+.c-panel-des__title {
+    margin :25px 0 40px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.c-panel-des__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.c-panel-des__item {
+    width: calc((100% / 5) - 17px);
+    padding: 25px 25px;
+    margin-bottom: 25px;
+    margin-right: 21px;
+    background: #fff;
+    border: 1px dotted #d1d1d1;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.c-panel-des__item:nth-of-type(5n) {
+    margin-right: 0;
+}
+
+.c-panel-des__item:hover {
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.086);
+    scale: 1.1;
+}
+
+.c-panel-des__item_icon {
+    width: 100%;
+    max-width: 65px;
+    margin: auto;
+    background: #fff;
+    margin-bottom: 10px;
+
+}
+
+.c-panel-des__item_icon img {
+    width: 100%;
+    /* filter: drop-shadow(1px 1px 8px rgb(100, 101, 165)); */
+}
+
+.c-panel-des__item_txt {
+    font-size: 15px;
+    color: #555f68;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width:992px) {
+    .c-panel-des__item {
+        width: calc((100% / 3) - 14px);
+    }
+
+    .c-panel-des__item:nth-of-type(3n) {
+        margin-right: 0;
+    }
+
+    .c-panel-des__item:nth-of-type(5n) {
+        margin-right: 21px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .c-panel-des__item {
+        width: calc((100% / 2) - 11px);
+    }
+
+    .c-panel-des__item:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
+    .c-panel-des__item:nth-of-type(3n) {
+        margin-right:auto;
+    }
+
+}

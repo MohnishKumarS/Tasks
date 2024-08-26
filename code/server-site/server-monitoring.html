@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Monitoring Services | ServerAdmin</title>
+  <meta name="description"
+    content="Don't let server downtime disrupt your business. Our cost-effective server monitoring services ensure peak performance & security, providing you with the best value for your investment.">
+  <meta name="keywords"
+    content="Server Monitoring, Server Monitoring Services, proactive monitoring, Reactive monitoring">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <link rel="canonical" href="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- country code-->
+  <link rel="stylesheet" href="assets/lib/countries-code/css/intlTelInput.css">
+</head>
+
+<body class="server-monitor">
+  <!-- hero sec -->
+  <section class="hero-sec">
+    <nav class="navbar navbar-expand-lg " id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <!-- <img class="nav__logo" src="./assets/image/common/ewallhost-logo.svg" alt="eWallHost" width="300px"
+            height="107px" title="eWallHost"> -->
+          ServerAdmin
+        </a>
+        <!-- sidebar menu -->
+        <main class="sidebar-menu">
+          <input type="checkbox" id="toogle-menu" />
+
+          <label for="toogle-menu" class="toogle-open"><span></span></label>
+
+          <nav>
+            <div>
+              <!-- <a href="#">sidebar</a> -->
+              <label for="toogle-menu" class="toogle-close">
+                <span></span>
+              </label>
+            </div>
+            <ul>
+              <li><a href="linux-server-management.html">
+                  <img src="./assets/image/common/header/server-manage.svg" class="nav-link_img" width="150"
+                    height="150" alt="server-manage">
+                  Server Management </a></li>
+              <li><a href="server-setup.html">
+                  <img src="./assets/image/common/header/server-setup.svg" class="nav-link_img" width="150" height="150"
+                    alt="server-manage">
+                  Server Setup </a></li>
+              <li><a href="server-monitoring.html">
+                  <img src="./assets/image/common/header/server-monitor.svg" class="nav-link_img" width="150"
+                    height="150" alt="server-manage">
+                  Server Monitoring </a></li>
+              <li><a href="migration-services.html">
+                  <img src="./assets/image/common/header/server-migration.svg" class="nav-link_img" width="150"
+                    height="150" alt="server-manage">
+                  Migration Services </a></li>
+            </ul>
+          </nav>
+        </main>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="linux-server-management.html">
+                <img src="./assets/image/common/header/server-manage.svg" class="nav-link_img" width="150" height="150">
+                Server Management
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="server-setup.html">
+                <img src="./assets/image/common/header/server-setup.svg" class="nav-link_img" width="150" height="150">
+                Server Setup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="server-monitoring.html">
+                <img src="./assets/image/common/header/server-monitor.svg" class="nav-link_img" width="150"
+                  height="150">
+                Server Monitoring</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="migration-services.html">
+                <img src="./assets/image/common/header/server-migration.svg" class="nav-link_img" width="150"
+                  height="150">
+                Migration Services</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="scrolling-line"></div>
+    </nav>
+    <div class="container">
+      <div class="hero-sec__content">
+        <h1 class="hero-sec__title">
+          Advance Server Monitoring services
+        </h1>
+        <p class="hero-sec__sub-title">
+          A complete server Monitoring service to make your server run at its best.
+        </p>
+      </div>
+    </div>
+    <div class="hero-sec__waves">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#a2d9ff" fill-opacity="1"
+          d="M0,224L120,202.7C240,181,480,139,720,133.3C960,128,1200,160,1320,176L1440,192L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+  <!-- ENDhero sec -->
+
+  <!-- product plans -->
+  <section class="product-plans">
+    <div class="container">
+      <h2 class="site-title centered title-lined">
+        <span class="site__txt">Our plans</span>
+      </h2>
+      <div class="plans js-product-plans">
+        <div class="plan ">
+          <div class="plan__header">
+            <h3 class="plan__name">Reactive</h3>
+          </div>
+          <div class="plan__price">
+            <span class="price-curr">₹</span>
+            <span class="price-amount">20</span>
+            <span class="price-pack">/ month</span>
+          </div>
+          <div class="plan__order-btn">
+            <button class="btn-main" type="button" data-bs-toggle="modal" data-bs-target="#enquiryForm">Order
+              Now</button>
+          </div>
+          <div class="plan__spec">
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Configurations</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Server reboot support</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Clustering suggestions</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Load balancing</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Technical Support</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="plan">
+          <div class="plan__header">
+            <h3 class="plan__name">Proactive</h3>
+          </div>
+          <div class="plan__price">
+            <span class="price-curr">₹</span>
+            <span class="price-amount">50</span>
+            <span class="price-pack">/ month</span>
+          </div>
+          <div class="plan__order-btn">
+            <button class="btn-main" type="button" data-bs-toggle="modal" data-bs-target="#enquiryForm">Order
+              Now</button>
+          </div>
+          <div class="plan__spec">
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">
+                Predictive Maintenance</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Security Measures</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Restoration</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">
+                Root Cause Analysis</span>
+            </div>
+            <div class="plan__spec-feature">
+              <span class="plan__spec-txt">Backup</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END product plans -->
+
+
+  <!--  featured des 3  -->
+  <section class="featured-des-3">
+    <div class="container">
+      <h2 class="site-title centered">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+        <span class="site__txt">why choose us</span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+            <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+          </svg></span>
+      </h2>
+      <div class="featured-des-3__items">
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/ping-monitoring.svg" class="featured-des-3__img"
+              width="150" height="150" loading="lazy" alt="ping-monitoring" />
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Ping Monitoring</div>
+            <div class="featured-des-3__desc">With our ping monitoring, we monitor your server's response time to ICMP
+              requests, ensuring it is always within reach and promptly identifying any latency problems. </div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/memory-monitoring.svg" class="featured-des-3__img"
+              width="150" height="150" loading="lazy" alt="memory-monitoring" />
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">
+              Memory Monitoring</div>
+            <div class="featured-des-3__desc">We will observe and measure your server's memory usage, which helps
+              identify memory leaks and RAM usage, Swap space utilization, and optimize memory allocation.</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/optimizing-resource-allocation.svg"
+              class="featured-des-3__img" width="150" height="150" loading="lazy"
+              alt="optimizing-resource-allocation" />
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Optimizing Resource Allocation</div>
+            <div class="featured-des-3__desc">It involves observing and measuring your server's utilization by adjusting
+              resources to help improve server performance and ensure a smooth user experience.</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/load-balancing.svg" class="featured-des-3__img"
+              width="150" height="150" loading="lazy" alt="load-balancing">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Load Balancing</div>
+            <div class="featured-des-3__desc">Load Balancing is the process of distributing the server across multiple
+              servers to ensure it is manageable, optimize resource utilization, increase availability, and improve
+              performance. </div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/disk-check.svg" class="featured-des-3__img"
+              width="150" height="150" loading="lazy" alt="disk-check">
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Disk Check</div>
+            <div class="featured-des-3__desc">We monitor disk usage and health by identifying disk space utilization,
+              input and output operations, and health status.</div>
+          </div>
+        </div>
+        <div class="featured-des-3__item">
+          <div class="featured-des-3__icon">
+            <img src="./assets/image/pages/server-monitor/features/host-monitoring.svg" class="featured-des-3__img"
+              width="150" height="150" loading="lazy" alt="host-monitoring" />
+          </div>
+          <div class="featured-des-3__content">
+            <div class="featured-des-3__head">Host Monitoring</div>
+            <div class="featured-des-3__desc">It collects data about your server's performance, stability, and overall
+              health, and the problems can be promptly resolved before they have a chance to worsen.</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!--  END featured des 3  -->
+
+
+
+  <!--  featured des 5  -->
+  <section class="featured-des-5">
+    <div class="container">
+      <h2 class="featured-des-5__title">
+        Monitored Data on Your Server
+      </h2>
+      <div class="featured-des-5__items-wrapper">
+
+        <div class="featured-des-5__items">
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Monitor application & Hardware Performance.</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Real-time performance analysis</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Server functionality</span>
+          </div>
+        </div>
+        <div class="featured-des-5__items">
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              Health Inspection </span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">
+              Network bandwidth usage</span>
+          </div>
+          <div class="featured-des-5__item">
+            <span class="featured-des-5__icon"><i class="fas fa-check"></i></span>
+            <span class="featured-des-5__text">Assured & reliable Monitoring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END featured des 5 -->
+
+  <!-- suggestion block -->
+  <section class="suggestion-block">
+    <div class="container">
+      <div class="suggestion-block__img-wrapper">
+        <img class="suggestion-block__img" src="./assets/image/pages/server-monitor/server-monitoring.svg"
+          alt="transfer-it" width="150px" height="150px" />
+      </div>
+      <div class="suggestion-block__content-wrapper">
+        <div class="suggestion-block__icon">
+          <i class="fa-solid fa-meteor two"></i>
+        </div>
+        <p class="suggestion-block__title">
+          Why Choose ________ for Server Monitoring Services?
+        </p>
+        <p class="suggestion-block__txt">
+          Monitoring your business and server can be daunting in the fast-paced world. But worry not—it's the perfect
+          time to choose our affordable Server Monitoring services. We're here to enhance your server's performance,
+          provide robust security, and minimize downtime. With our extensive expertise and in-depth understanding of
+          server monitoring, we take the burden off your shoulders.
+        </p>
+        <p class="suggestion-block__txt">
+          Our proactive Monitoring involves collecting data and analyzing it before a problem emerges. The primary goal
+          is to detect and resolve issues before they occur, reducing downtime and disturbance. There are some nuanced
+          differences between reactive and proactive Monitoring. It's about spotting and resolving potential problems
+          before they escalate, ensuring your server's security and stability.
+        </p>
+        <p class="suggestion-block__txt">
+          <b>Comprehensive Server Monitoring Services:</b>
+        </p>
+        <ul class="suggestion-block__list">
+          <li class="suggestion-block__list-item">
+            Providing expert technical support immediately to recover failed services
+          </li>
+          <li class="suggestion-block__list-item">Maintaining servers constantly to prevent downtime</li>
+          <li class="suggestion-block__list-item">Server administration that prevents errors administration</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+  <!-- suggestion block END -->
+
+  <!--  FAQ s  -->
+  <section class="faQ">
+    <div class="container">
+      <div class="faQ__title">
+        <h2 class="site-title centered">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+              <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            </svg></span>
+          <span class="site__txt">Faq's</span>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="80" height="2" viewBox="0 0 80 2" fill="none">
+              <path d="M1 1H17.212" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M25 1H79" stroke="#69BD46" stroke-width="2" stroke-linecap="round"></path>
+            </svg></span>
+        </h2>
+      </div>
+
+      <div class="faQ__accordion">
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What are Server monitoring services?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">It involves tracking, measuring, and observing a server's operations and
+              processes. The main objective is to gather information that can be utilized to evaluate the server's state
+              of health, guarantee that it runs at peak efficiency, and ensure that applications function without a
+              hitch. </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">Why are server monitoring services essential for your business? </div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">It plays a vital role in every business size. They help monitor server
+              performance and security, and administrators identify and resolve issues before they become significant
+              problems. </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What are the key metrics you should monitor?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">Key metrics we will monitor on this are CPU usage, memory utilization, disk
+              input, and
+              Output, network bandwidth, response time, and error rates. This will maintain your server's health and
+              prevent issues.
+            </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What plans are available for your server monitoring services? </div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">Two plans are available for our server monitoring services, which include
+              reactive and proactive Monitoring. </div>
+          </div>
+        </div>
+        <div class="faQ__accordion-item">
+          <div class="faQ__accordion-header">What are the benefits of using server monitoring services?</div>
+          <div class="faQ__accordion-content">
+            <div class="faQ_accordion-txt">Using our monitoring services has several benefits, including identifying
+              security vulnerabilities, monitoring CPU time and disk space, and helping to reduce server downtime.
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more sections as needed -->
+      </div>
+
+    </div>
+  </section>
+  <!--  END FAQ s  -->
+
+
+  <!-- footer -->
+  <footer class="footer-wrap">
+    <div class="footer-text">
+      Copyright © 2024 eWallHost Web Services Pvt. Ltd..All Rights Reserved
+    </div>
+  </footer>
+  <!-- END footer -->
+
+
+
+
+  <!--Enquiry Modal -->
+  <div class="modal fade" id="enquiryForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="contact_form">
+            <form id="enquiry-info">
+              <div class="row">
+                <div class="col-12">
+                  <input type="text" class="form_input" placeholder="Name*" name="name"
+                    onkeyup="return this.value=this.value.replace(/[^a-zA-z ]/g,'')" required>
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form_input" placeholder="Email*" name="email" required>
+                </div>
+                <div class="col-12">
+                  <input type="tel" class="form_input mobile-no" placeholder="Mobile*" name="mobile"
+                    onkeyup="return this.value=this.value.replace(/[^0-9]/g,'')" required>
+                </div>
+                <div class="col-12">
+                  <textarea name="message" class="form_text-area m-0" placeholder="Message*" rows="5"
+                    required></textarea>
+                </div>
+                <div>
+
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="contact-infos">
+            <div><i class="fa-solid fa-phone"></i><span>+91 96550 05757</span></div>
+            <div><i class="fa-solid fa-envelope"></i><span>contact@ewallhost.com</span></div>
+          </div>
+          <button class="btn-main" type="submit">Send Enquiry</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div> <!-- END Enquiry Modal -->
+
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="assets/lib/countries-code/js/intlTelInput.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

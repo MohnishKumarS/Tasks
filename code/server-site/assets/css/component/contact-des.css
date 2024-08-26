@@ -1,0 +1,118 @@
+    /* contact us */
+    .contact-wrapper {
+      margin-bottom: 100px;
+      padding: 100px 0;
+      background-color: #eff0ff;
+      /* background: url('../../image/common/contact-bg.svg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed; */
+
+      .contact-head {
+        color: #2d1a77;
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+      }
+
+      .contact-subhead {
+        font-size: .9rem;
+        color: #5e6371;
+        margin-bottom: 20px;
+      }
+
+      .contact-row {
+
+        .contact-col {
+          padding: 0;
+
+          .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 50px 30px;
+            box-shadow: 1px 1px 15px -5px #c7c7c7;
+          }
+
+          .contact-details {
+            height: 100%;
+            padding: 50px 50px;
+
+            .contact-info {
+
+              .contact-info__items {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                row-gap: 40px;
+
+                .contact-info__item {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  column-gap: 30px;
+
+                  .contact-info__icon i {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #ee3d75;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 1.2rem;
+                    line-height: 60px;
+                    text-align: center;
+                  }
+
+                  .contact-info__txt {
+                    flex: 1 1;
+                    font-size: 1.1rem;
+                    color: #65347b;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+
+      @media only screen and (max-width:768px) {
+        .contact-form {
+          padding: 50px 15px !important;
+        }
+
+        .contact-details {
+          padding: 50px 15px !important;
+        }
+      }
+
+    }
+
+    .form_input,
+    .form_text-area {
+      outline: none;
+      width: 100%;
+      height: 50px;
+      border: 1px solid #ccc;
+      padding-left: 20px;
+      margin-bottom: 30px;
+
+      &::placeholder {
+        color: #5e6371;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+    }
+
+    .form_text-area {
+      padding-top: 20px;
+      min-height: 100px;
+    }
+
+    .form_input:active,
+    .form_input:focus,
+    .form_text-area:active,
+    .form_text-area:focus {
+      border: 1px solid #3a3a3a;
+    }
+
+    /* END contact us */

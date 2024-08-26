@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Submission</title>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message"></textarea><br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  const formData = new FormData(this); // Get form data
+    // Iterate through formData entries and print key/value pairs
+    const formDataArray = Array.from(formData);
+  console.log('Form data as array:', formDataArray);
+  // Convert form data to an object
+  const formValues = {};
+  formData.forEach((value, key) => {
+  
+    formValues[key] = value;
+  });
+ 
+
+  // Store form values in localStorage
+  localStorage.setItem('formData', JSON.stringify(formValues));
+  
+  // You can retrieve the form values from localStorage like this:
+  const storedData = JSON.parse(localStorage.getItem('formData'));
+  console.log('Form data stored in localStorage:', storedData);
+  
+  // Optionally, you can redirect the user to another page after submission
+  // window.location.href = 'anotherpage.html';
+});
+
+if(console.log('ice') && 0){
+  // console.log('ice');
+}else{
+  console.log('cream');
+}
+</script>
+
+</body>
+</html>

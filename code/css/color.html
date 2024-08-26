@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="swiper/swiper.min.css">
+  <link rel="stylesheet" href="color.css">
+  <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+<body>
+    <style>
+        .product-single__designImgs{
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+        .product-single__designImgs img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .product-single__designImgs .typeImg.active{
+            display: block;
+        }
+        .product-single__designImgs .typeImg{
+            display: none;
+        }
+        .design-image{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-width: 200px;
+        }
+    </style>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-7">
+       
+        <div class="product-single__designImgs">
+            <img src="image/products/greyhalf.jpg" class="typeImg" data-color="grey" data-type="half">
+            <img src="image/products/redhalf.jpg" class="typeImg" data-color="red" data-type="half">
+            <img src="image/products/blackhalf.jpg" class="typeImg" data-color="black" data-type="half">
+            <img src="image/products/greyfull.jpg" class="typeImg" data-color="grey" data-type="sleeve">
+            <img src="image/products/redfull.webp" class="typeImg" data-color="red" data-type="sleeve">
+            <img src="image/products/whitefull.webp" class="typeImg" data-color="black" data-type="sleeve">
+            <img src="image/products/greyhoodie.jpg" class="typeImg" data-color="grey" data-type="hoodie">
+            <img src="image/products/redhoodie.webp" class="typeImg" data-color="red" data-type="hoodie">
+            <img src="image/products/blackhoodie.webp" class="typeImg" data-color="black" data-type="hoodie">
+            <img src="image/products/game-over.png"  class="design-image">
+        </div>
+
+      </div>
+      <div class="col-lg-5">
+            <div>
+                <div class="py-5">
+                    <div class="product-single__swatches">
+                         <div class="product-swatch color-swatches">
+                            <label>Color</label>
+                            <div class="swatch-list">
+                                <input type="radio" name="color" id="swatch-11" value="black" checked>
+                                <label class="swatch swatch-color js-swatch" for="swatch-11" aria-label="Black" data-bs-toggle="tooltip" data-bs-placement="top" title="Black" style="color: #222"></label>
+                                <input type="radio" name="color" id="swatch-12" value="red" >
+                                <label class="swatch swatch-color js-swatch" for="swatch-12" aria-label="Red" data-bs-toggle="tooltip" data-bs-placement="top" title="Red" style="color: #C93A3E"></label>
+                                <input type="radio" name="color" id="swatch-13" value="grey">
+                                <label class="swatch swatch-color js-swatch" for="swatch-13" aria-label="Grey" data-bs-toggle="tooltip" data-bs-placement="top" title="Grey" style="color: #E4E4E4"></label>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            
+                <div class="py-5">
+                   <div>
+                    <select class="form-select" id="product-style">
+                        <!-- <option selected>choose type</option> -->
+                        <option value="half" selected>Half Hand</option>
+                        <option value="sleeve">Full sleeve</option>
+                        <option value="hoodie">Hoodie</option>
+                      </select>
+                   </div>
+                </div>
+            </div>
+      </div>
+  </div>
+
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="bootstrap/bootstrap-slider.min.js"></script>
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="swiper/swiper.min.js"></script>
+  <script src="color.js"></script>
+  
+
+
+  <script>
+    const checkedColor = $('input[name="color"]:checked').val();
+    const checkedStyle = $('#product-style').val();
+    const productImages = document.querySelectorAll('.product-single__designImgs .typeImg');
+    
+    const colorRadios  = document.querySelectorAll('input[name="color"]');
+    const styleOptions = document.getElementById('product-style');
+
+    // Add change event listener to the select product style 
+    styleOptions.addEventListener('change',function(){
+        const selectedStyle = styleOptions.value;
+        const selectedColor = $('input[name="color"]:checked').val();
+        checkSetActive(selectedColor,selectedStyle);
+    })
+
+    // Add change event listener to each radio button
+    colorRadios.forEach((radio) => {
+        radio.addEventListener('change',function(){
+            const selectedColor  = this.value;
+            const selectedStyle = $('#product-style').val();
+            checkSetActive(selectedColor,selectedStyle);
+        })
+    });
+    
+
+    checkSetActive(checkedColor, checkedStyle);
+
+    
+    function checkSetActive(color,style){
+        productImages.forEach(function(img){
+              // Show images with the same color and type, hide others
+            if(img.getAttribute('data-color') === color && img.getAttribute('data-type') === style){
+                img.classList.add('active');
+            }else{
+                img.classList.remove('active');
+            }
+        })
+
+    }
+
+
+  </script>
+</body>
+</html>

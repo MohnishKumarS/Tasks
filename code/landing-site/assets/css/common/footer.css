@@ -1,0 +1,295 @@
+.footer {
+  padding-top: 40px !important;
+  padding-bottom: 0px !important;
+  background-color: #1f2d38 !important;
+  color: #d5d9dd;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row-footer {
+  display: flex;
+}
+
+.col-footer-first {
+  flex: 1;
+}
+
+.row-one {
+  display: flex;
+}
+
+.col-first {
+  flex: 1;
+}
+
+.col-second {
+  flex: 1;
+}
+
+.col-footer-second {
+  flex: 1;
+}
+
+.row-two {
+  display: flex;
+}
+
+.col-third {
+  flex: 1;
+}
+
+.col-fourth {
+  flex: 1;
+}
+
+@media only screen and (max-width:900px) {
+  .row-footer {
+    display: initial;
+  }
+
+  .col-footer-first {
+    flex: none;
+    width: 100%;
+  }
+
+  .col-footer-second {
+    flex: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .row-one {
+    display: initial;
+  }
+
+  .row-one .col-second {
+    margin-top: 15px;
+  }
+
+  .row-two {
+    display: initial;
+  }
+
+  .footer-nav__item-wrapper .footer-nav__item {
+    margin-bottom: 3px;
+  }
+}
+
+.col-third .footer__title:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .container {
+    flex-wrap: wrap;
+  }
+}
+
+.footer .footer-nav {
+  flex: 9 !important;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .footer-nav {
+    flex: none;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.footer .footer-nav .footer-nav__items {
+  flex: 1;
+}
+
+.footer .footer-nav .footer-nav__items .footer-nav__item-wrapper {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer .footer-nav .footer-nav__items .footer-nav__item-wrapper .footer-nav__item {
+  margin-bottom: 5px;
+}
+
+.footer .footer-nav .footer-nav__items .footer-nav__item-wrapper .footer-nav__item a {
+  color: #d5d9dd;
+  font-size: 0.95rem;
+}
+
+.footer .footer-nav .footer-nav__items .footer-nav__item-wrapper .footer__title {
+  margin-top: 25px;
+}
+
+.footer .footer-content {
+  flex: 2;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer .footer-content {
+    flex: 1.5;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer .footer-content {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.footer .footer-content-about__txt {
+  font-size: 0.95rem;
+}
+
+.footer .footer-content-about__txt:last-of-type {
+  margin-bottom: 25px;
+}
+
+.footer .footer-content-connect__address {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.footer .footer-content-connect__link {
+  font-size: 0.95rem;
+}
+
+.footer .footer-content-connect__social {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.footer .footer-content-connect__item {
+  display: inline-block;
+  padding: 8px 13px;
+  margin-right: 15px;
+  background: #f7f7f7;
+  border-radius: 50%;
+}
+
+.footer .footer-content-connect__item.linkedin {
+  margin-top: 10px;
+}
+
+.footer .footer-content-connect__item i {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.footer .footer-content-connect__item.facebook i {
+  color: #3B5B9D;
+}
+
+.footer .footer-content-connect__item.twitter i {
+  color: #3B5B9D;
+}
+
+.footer .footer-content-connect__item.linkedin i {
+  color: #4AB0E0;
+}
+
+.footer__title {
+  color: #d5d9dd;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer__title .footer__title-icon {
+  font-size: 1.1rem;
+}
+
+.footer-content-more-links {
+  margin-top: 25px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #d5d9dd;
+  padding-top: 25px;
+  margin-top: 10px;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-bottom__item {
+  flex: 1;
+  text-align: center;
+}
+
+.faqs__item {
+  border-bottom: unset !important;
+
+}
+
+/* ============= common ========================= */
+.footer-nav__item {
+  list-style: none;
+  color: white;
+}
+
+.footer-nav__item-wrapper {
+  padding-left: 0;
+}
+
+.footer-nav__item a {
+  color: white !important;
+}
+
+.footer-nav__item a:visited,
+.footer-nav__item a:active {
+  color: white !important;
+}
+
+.footer {
+  color: white !important;
+}
+
+.ligth-link {
+  color: white !important;
+}
+
+.footer50 {
+  padding-left: 10%;
+}
+
+.footer-padding {
+  padding-left: 10%;
+}
+
+@media only screen and (max-width:768px) and (min-width:550px) {
+  .footer .footer-content-connect__link {
+    font-size: 14px !important;
+  }
+
+  .footer .footer-content-connect__address {
+    font-size: 14px !important;
+  }
+
+  .footer .footer-content-about__txt {
+    font-size: 14px !important;
+  }
+
+  .footer {
+    font-size: 14px !important;
+  }
+
+  .footer .footer-content-connect__item {
+    padding: 5px 8px !important;
+  }
+
+  .footer__title {
+    font-size: 1rem !important;
+  }
+}

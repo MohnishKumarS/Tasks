@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux VPS</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="linux.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="swiper/swiper.min.css"> -->
+  <link rel="stylesheet" href="swiper2/swiper-bundle.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- <img src="image/continent/world.svg" alt=""> -->
+  <!-- <div class="div1">Both divs are the same size now!</div>
+  <br>
+  <div class="div2">Hooray!</div>
+  <button  onclick="downloadPDF()">download</button> -->
+  <style>
+
+  </style>
+  <script>
+    class Car {
+      constructor(make, model) {
+        this._make = make; // Private property to store make
+        this._model = model; // Private property to store model
+      }
+
+      // Getter method for make property
+      get make() {
+        return this._make;
+      }
+
+      // Setter method for make property
+      set make(newMake) {
+        this._make = newMake;
+      }
+
+      // Getter method for model property
+      get model() {
+        return this._model;
+      }
+
+      // Setter method for model property
+      set model(newModel) {
+        this._model = newModel;
+      }
+    }
+
+    // Create a new Car object
+    const myCar = new Car('Toyota', 'Corolla');
+
+    // Accessing make property using getter method
+    console.log(myCar.make); // Output: Toyota
+
+    // Setting make property using setter method
+    myCar.make = 'Honda';
+
+    // Accessing make property again to see the updated value
+    console.log(myCar.make); // Output: Honda
+
+    //   function Car(make, model) {
+    //   this.make = make;
+    //   this.model = model;
+    //   console.log(this);
+
+    //   let displayInfo = function() {
+    //     console.log(`Make: ${this.make}, Model: ${this.model}`); // 'this' does not refer to the Car instance
+    //   }
+
+    //   this.showMake = function() {
+    //     console.log(`Make: ${this.make}`); // 'this' refers to the Car instance
+    //     displayInfo.call(this);
+    //   }
+    // }
+
+    // const myCar = new Car('Toyota', 'Corolla');
+    // myCar.showMake(); // Output: Make: Toyota
+
+    // class Car {
+    //   constructor(make, model) {
+    //     this.make = make;
+    //     this.model = model;
+    //     console.log(this);
+    //   }
+
+    //   displayInfo() {
+    //     console.log(`Make: ${this.make}, Model: ${this.model}`);
+    //   }
+
+    //   showMake = () => {
+    //     console.log(`Make: ${this.make}`);
+    //   }
+
+    //   display() {
+    //     this.displayInfo(); // Call the displayInfo method
+    //     this.showMake(); // Call the showMake method
+    //   }
+    // }
+
+    // const myCar = new Car('Toyota', 'Corolla');
+    // myCar.displayInfo();
+
+    // Call the function to initiate the download
+
+
+    // Asynchronous function that returns a Promise
+    // function fetchData() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve("Data fetched successfully");
+    //     }, 2000);
+    //   });
+    // }
+
+    // // Example of using async/await in a live function
+    // async function fetchDataLive() {
+    //   console.log("Fetching data...");
+
+    //   try {
+    //     // Await the result of the asynchronous operation
+    //     const result = await fetchData();
+    //     console.log('moni');
+    //     // This line will be executed after the asynchronous operation is completed
+    //     console.log(result); // Output: Data fetched successfully
+    //   } catch (error) {
+    //     // Handle any errors that occur during the asynchronous operation
+    //     console.error("Error fetching data:", error);
+    //   }
+    // }
+
+    // // Call the async function
+    // fetchDataLive();
+
+    // Asynchronous function
+    // function asynchronousFunction() {
+    //   console.log("Asynchronous function started");
+    //   setTimeout(() => {
+    //     console.log("Asynchronous operation completed after 2 seconds");
+    //   }, 5000);
+    //   console.log("Asynchronous function completed");
+    // }
+
+    // // Call the asynchronous function
+    // console.log("Before calling asynchronous function");
+    // asynchronousFunction();
+    // console.log("After calling asynchronous function");
+  </script>
+
+
+
+  <div class="search-box">
+    <button class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text" class="input-search" placeholder="Type to Search...">
+  </div>
+
+  <style>
+    .search-box {
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+    }
+
+    .input-search {
+      height: 50px;
+      width: 50px;
+      border-style: none;
+      padding: 10px;
+      font-size: 18px;
+      letter-spacing: 2px;
+      outline: none;
+      border-radius: 25px;
+      transition: all .5s ease-in-out;
+      background-color: #22a6b3;
+      padding-right: 40px;
+      color: #000;
+    }
+
+    .input-search::placeholder {
+      color: rgba(2, 1, 1, 0.5);
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 100;
+    }
+
+    .btn-search {
+      width: 50px;
+      height: 50px;
+      border-style: none;
+      font-size: 20px;
+      font-weight: bold;
+      outline: none;
+      cursor: pointer;
+      border-radius: 50%;
+      position: absolute;
+      right: 0px;
+      color: #000;
+      background-color: transparent;
+      /* pointer-events: painted;   */
+    }
+
+    .btn-search:focus~.input-search {
+      width: 300px;
+      border-radius: 0px;
+      background-color: transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    }
+
+    .input-search:focus,
+    .input-search:active {
+      width: 300px;
+      border-radius: 0px;
+      background-color: transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    }
+  </style>
+  <img src="./storage-share.svg" alt="">
+
+  <!-- <div class="preloading">
+  <div class="loader"></div>
+ </div> -->
+
+
+
+  <style>
+    /* HTML: <div class="loader"></div> */
+    .preloading {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: grid;
+      place-items: center;
+      background-color: #fff;
+      z-index: 1000;
+    }
+
+    .loader {
+      width: 120px;
+      height: 60px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      filter: blur(5px) contrast(10) hue-rotate(60deg);
+      mix-blend-mode: darken;
+    }
+
+    .loader:before,
+    .loader:after {
+      content: "";
+      width: 40px;
+      border-radius: 50%;
+      background: #ff00ff;
+      animation: l3 1s infinite alternate;
+    }
+
+    .loader:after {
+      --s: -3;
+    }
+
+    @keyframes l3 {
+
+      90%,
+      100% {
+        transform: translate(calc(var(--s, 1)*20px))
+      }
+    }
+  </style>
+
+  <!-- - change product plans  -- -->
+  <div class="plans-wrapper">
+    <div class="container mt-5">
+      <!-- ---- eTab continent ---------- -->
+      <!-- <div class="e-tab-continent">
+        <button class="e-tab_btn active" id="europe">Europe</button>
+        <button class="e-tab_btn" id="northamerica">N America</button>
+        <button class="e-tab_btn" id="asia">Asia</button>
+        <button class="e-tab_btn" id="africa">Africa</button>
+        <button class="e-tab_btn" id="oceania">Oceania</button>
+      </div> -->
+
+      <div class="continent-map"></div>
+
+      <!-- ----- eTab country ---------- -->
+      <div class="e-tab-countries">
+    
+        <section class="country-wrapper" data-continent="europe">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#hetzner-de">
+                  <span class="country_title">GERMANY</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Germany flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#hetzner-fin">
+                  <span class="country_title">FINLAND</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="India flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#swiss-hdd">
+                  <span class="country_title">SWISS</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="switzerland flag" />
+                </button>
+              </div>
+              <!-- <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">finland</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div> -->
+              <!-- <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">UK</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">norway</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">france</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">denmark</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">ireland</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">italy</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div>
+              <div class="swiper-slide"> <button class="e-tab_btn">
+                  <div class="country_title">netherland</div>
+                  <img src="../image/flag/germany.svg" alt="country-flag">
+                </button></div> -->
+
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="country-wrapper" data-continent="northamerica">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-ca">
+                  <span class="country_title">CANADA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Canada flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#usa">
+                  <span class="country_title">USA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="USA flag" />
+                </button>
+              </div>
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="country-wrapper" data-continent="asia">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#india">
+                  <span class="country_title">INDIA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="India flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-sgp">
+                  <span class="country_title">SINGAPORE</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Singapore flag" />
+                </button>
+              </div>
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="country-wrapper" data-continent="africa">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-za">
+                  <span class="country_title">SOUTH AFRICA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Southafrica flag" />
+                </button>
+              </div>
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="country-wrapper" data-continent="oceania">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-au">
+                  <span class="country_title">AUSTRALIA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Australia flag" />
+                </button>
+              </div>
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="country-wrapper" data-continent="world">
+          <div class="swiper countrySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <button class="e-tab_btn active" data-target="#hetzner-de">
+                  <span class="country_title">GERMANY</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Germany flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#hetzner-fin">
+                  <span class="country_title">FINLAND</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="India flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#swiss-hdd">
+                  <span class="country_title">SWISS</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="switzerland flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-ca">
+                  <span class="country_title">CANADA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Canada flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#usa">
+                  <span class="country_title">USA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="USA flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn" data-target="#india">
+                  <span class="country_title">INDIA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="India flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-sgp">
+                  <span class="country_title">SINGAPORE</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Singapore flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-za">
+                  <span class="country_title">SOUTH AFRICA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Southafrica flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one-provider-au">
+                  <span class="country_title">AUSTRALIA</span>
+                  <img src="../image/flag/germany.svg" width="32px" alt="Australia flag" />
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <button class="e-tab_btn " data-target="#one">
+                  <span class="country_title"></span>
+                  <!-- <img src="../image/flag/germany.sv" width="32px" alt="Australia flag" /> -->
+                </button>
+              </div>
+
+
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+
+      </div>
+
+      <style>
+        /* -- etab - btn  */
+        .e-tab-continent {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 30px;
+
+          .e-tab_btn {
+            position: relative;
+            width: 100px;
+            padding: 10px 0px;
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: transparent;
+            border: none;
+            border-radius: 50px;
+            margin: 10px 0;
+            outline: none;
+            transition: .2s all ease-in-out;
+            z-index: 1;
+
+            &::before {
+              content: '';
+              width: 20px;
+              height: 20px;
+              background-color: #f8b9c2;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: -19%;
+              transform: translateY(-50%);
+              z-index: 0;
+            }
+
+            &::after {
+              content: '';
+              width: 2px;
+              height: 100%;
+              background-color: #f8b9c2;
+              position: absolute;
+              top: 50%;
+              left: -10%;
+              z-index: -1;
+            }
+
+            &.active {
+              color: #1a478c;
+              font-weight: 800;
+
+              &::before {
+                background-color: #1a478c;
+                box-shadow: 0 0 10px 1px #1a478c;
+              }
+            }
+
+          }
+        }
+
+        .linux-vps-plans {
+          display: flex;
+        }
+
+        .linux-vps-plans .plans-continent {
+          display: none;
+          /* opacity: 0; */
+          transition: opacity 0.5s ease-in;
+        }
+
+        /* .linux-vps-plans .plans-card:has(.product-plan-5) + .plans-continent {
+          opacity: 1;
+        }
+      */
+      </style>
+
+      <div class="container p-0">
+        <h1>Change plans</h1>
+
+        <div class="linux-vps-plans">
+          <div class="plans-card">
+            <!-- product plans -->
+            <section id="one-provider-za" data-product="one-provider-za" class="southafrica">
+              <div class="product-plan-5"> southafrica plans </div>
+            </section>
+            <section id="one-provider-au" data-product="one-provider-au" class="australia">
+              <div class="product-plan-5"> australia plans </div>
+            </section>
+            <section id="one-provider-ca" data-product="one-provider-ca" class="canada">
+              <div class="product-plan-5"> canada plans </div>
+            </section>
+            <section id="one-provider-sgp" data-product="one-provider-sgp" class="canada">
+              <div class="product-plan-5"> singapore plans </div>
+            </section>
+            <section id="hetzner-de" data-product="hetzner-de" class="germany">
+              <div class="product-plan-5"> Germany plans </div>
+            </section>
+            <section id="hetzner-fin" data-product="hetzner-fin" class="finland">
+              <div class="product-plan-5"> finland plans </div>
+            </section>
+            <section id="swiss-hdd" data-product="linux-vps-swiss" class="swiss">
+              <div class="product-plan-5"> swiss plans </div>
+            </section>
+            <section id="usa-ny" data-product="linux-vps-usa-ssd" class="usa">
+              <div class="product-plan-5"> usa new york plans </div>
+            </section>
+            <section id="usa-california" data-product="linux-vps-usa-ssd" class="usa">
+              <div class="product-plan-5"> usa California plans </div>
+            </section>
+            <section id="usa-nj" data-product="linux-vps-usa-ssd" class="usa">
+              <div class="product-plan-5"> usa New Jersey plans </div>
+            </section>
+            <section id="india-chennai" data-product="linux-vps-in-ssd" class="india">
+              <div class="product-plan-5"> india chennai plans </div>
+            </section>
+          </div>
+          <div class="plans-continent">
+            <!-- ---- eTab continent ---------- -->
+            <div class="e-tab-continent">
+              <button class="e-tab_btn " id="world">All</button>
+              <button class="e-tab_btn active" id="europe">Europe</button>
+              <button class="e-tab_btn" id="northamerica">N America</button>
+              <button class="e-tab_btn" id="asia">Asia</button>
+              <button class="e-tab_btn" id="africa">Africa</button>
+              <button class="e-tab_btn" id="oceania">Oceania</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const plansCard = document.querySelector('.plans-card');
+        const plansContinent = document.querySelector('.plans-continent');
+        const productPlans = plansCard.querySelectorAll('section');
+        console.log(productPlans);
+        productPlans.forEach(sec => {
+
+          if (!sec.hasAttribute('hidden')) {
+            setTimeout(() => {
+              plansContinent.style.display = 'block';
+            }, 800)
+          }
+        })
+
+        //         document.addEventListener("DOMContentLoaded", function() {
+        //         const plansCard = document.querySelector('.plans-card');
+        //        const plansContinent = document.querySelector('.plans-continent');
+        //         const productPlans = plansCard.querySelectorAll('section');
+        //         console.log(productPlans);
+        //         productPlans.forEach(sec => {
+
+        //           if(!sec.hasAttribute('hidden')){
+        //               setTimeout(()=>{
+        //               plansContinent.style.display = 'block';
+        //             },1500)
+        //           }
+        //         })
+        // })
+      </script>
+      <!-- ----- eTab cities --------- -->
+      <div class="e-tab-cities">
+        <div class="cities-wrapper" id="india">
+          <p class="product_plans__txt">The data center is situated in the Indian cities of </p>
+          <button class="e-tab_btn" data-target="#india-chennai">Chennai</button>
+        </div>
+        <div class="cities-wrapper" id="usa">
+          <p class="product_plans__txt">The data center is situated in the USA cities of </p>
+          <button class="e-tab_btn" data-target="#usa-ny">New York</button>
+          <button class="e-tab_btn" data-target="#usa-nj">New Jersey</button>
+          <button class="e-tab_btn" data-target="#usa-california">California</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-5">
+      asdasdadasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur molestias quidem inventore corporis
+      magnam odit! Vitae deleniti adipisci rerum optio?
+    </div>
+    <div class="py-5">
+      asdasdadasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur molestias quidem inventore corporis
+      magnam odit! Vitae deleniti adipisci rerum optio?
+    </div>
+    <div class="py-5">
+      asdasdadasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur molestias quidem inventore corporis
+      magnam odit! Vitae deleniti adipisci rerum optio?
+    </div>
+    <div class="py-5">
+      asdasdadasd Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur molestias quidem inventore corporis
+      magnam odit! Vitae deleniti adipisci rerum optio?
+    </div>
+  </div>
+
+  <style>
+    .title {
+      font-size: 4rem;
+      text-align: center;
+      margin: 3rem 0;
+      opacity: .1;
+      transition: opacity 0.5s ease;
+    }
+  </style>
+  <script>
+    window.onscroll = function () {
+      // ------ to scroll down to show title highlight
+      // console.log(window.scrollY);
+      const titles = document.querySelectorAll('.title');
+
+      titles.forEach(title => {
+        const distanceFromTop = title.getBoundingClientRect().top;
+        // console.log(distanceFromTop);
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+
+        if (distanceFromTop < 500) {
+          title.style.opacity = 1;
+        } else {
+          var opacity = (window.innerHeight - distanceFromTop) / window.innerHeight;
+          opacity = Math.min(Math.max(opacity, 0.1), 1);
+          title.style.opacity = opacity;
+        }
+      })
+
+    }
+  </script>
+  <h1 class="title">About me</h1>
+  <!--  - End change product plans - -->
+
+  <!-- product plans -->
+  <!-- <section id="one-provider-au" data-product="one-provider-au" class="australia">australia plans</section>
+  <section id="one-provider-za" data-product="one-provider-za" class="southafrica">southafrica plans</section>
+  <section id="one-provider-ca" data-product="one-provider-ca" class="canada">canada plans</section>
+  <section id="one-provider-sgp" data-product="one-provider-sgp" class="canada">singapore plans</section>
+  <section id="hetzner-de" data-product="hetzner-de" class="germany">Germany plans</section>
+  <section id="hetzner-fin" data-product="hetzner-fin" class="finland">finland plans </section>
+  <section id="swiss-hdd" data-product="linux-vps-swiss" class="swiss">swiss plans </section>
+  <section id="usa-ny" data-product="linux-vps-usa-ssd" class="usa">usa new york plans </section>
+  <section id="usa-california" data-product="linux-vps-usa-ssd" class="usa">usa California plans </section>
+  <section id="usa-nj" data-product="linux-vps-usa-ssd" class="usa">usa New Jersey plans </section>
+  <section id="india-chennai" data-product="linux-vps-in-ssd" class="india">india chennai plans </section> -->
+
+  <!-- <section id="in-chennai" data-product="linux-vps-in-ssd" class="india">india bamgalore plans </section> -->
+  <!-- product plans END -->
+
+  <div class="mb-5 border border-white w-50 video">
+    <video muted autoplay loop class="w-100 ">
+      <source src=".\/icon_1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <img src="./storage-box.svg" alt="">
+  <img src="./storage-share.svg" alt="">
+  <h1 class="title">contact me</h1>
+
+  <img src="./storage-box.svg" alt="">
+  <img src="./storage-share.svg" alt="">
+  <!-- <span class="video">
+
+  </span> -->
+
+  <style>
+    .video {
+      position: relative;
+      z-index: 0;
+    }
+
+    .video::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+      z-index: 2;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const continentBtns = document.querySelectorAll('.e-tab-continent .e-tab_btn');
+      const continentMap = document.querySelector('.continent-map');
+      const countrySection = document.querySelectorAll('.country-wrapper');
+      const citiesSection = document.querySelectorAll('.cities-wrapper');
+      const citeTabBtns = document.querySelectorAll('.cities-wrapper .e-tab_btn');
+      const allTabsBtn = document.querySelectorAll('.e-tab-countries .swiper-slide .e-tab_btn');
+
+      countrySection.forEach(section => {
+        // Initialize Swiper with loop for country section
+        var swiper = new Swiper(section.querySelector('.countrySwiper'), {
+          slidesPerView: 8,
+          spaceBetween: 5,
+          loop: false,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          breakpoints: {
+            250: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            576: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            1200: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+            1400: {
+              slidesPerView: 7,
+              spaceBetween: 20,
+            },
+          },
+        });
+
+
+      })
+
+      // --- set default continent
+      continentBtns.forEach(cont => {
+        if (cont.classList.contains('active')) {
+          const continentId = cont.getAttribute('id');
+
+          continentMap.style.backgroundImage = `url('./image/continent/${continentId}.svg')`;
+
+          let eTabArray = Array.from(allTabsBtn);
+          // Get the current URL parameters
+          let urlParams = new URLSearchParams(window.location.search);
+          let storedActiveTab = urlParams.get('activeTab');
+
+
+          let activeTabElement = eTabArray.find((eTab) => eTab.getAttribute('data-Target') === '#' +
+            storedActiveTab);
+
+          // console.log(activeTabElement);
+          if (storedActiveTab !== null && activeTabElement) {
+            const continentId = activeTabElement.parentElement.parentElement.parentElement.parentElement
+              .getAttribute('data-continent');
+            activeTab(activeTabElement, continentId);
+            isNavigationActive(continentId)
+          } else {
+            activeTab(allTabsBtn[0], continentId);
+            isNavigationActive(continentId)
+          }
+
+        }
+
+        cont.addEventListener('click', function (e) {
+          let continentId = this.getAttribute('id');
+
+
+          continentBtns.forEach(btn => btn.classList.remove('active'));
+          if (!this.classList.contains('active')) {
+            this.classList.add('active');
+          }
+
+          // --- set default countries depending on continent
+          countrySection.forEach(c => {
+            let cTarget = c.getAttribute('data-continent');
+            let cLink = c.querySelectorAll('.e-tab_btn');
+
+            if (cTarget == continentId) {
+              activeTab(cLink[0], continentId);
+              isNavigationActive(continentId)
+            }
+          })
+
+        })
+      })
+
+
+      // Function to initialize the active continent and active tab
+      function activeTab(link, continentId) {
+        // console.log(link,continentId);
+        if (link && continentId) {
+          let sDataTarget = link.getAttribute('data-target');
+          let sDataPlan = document.querySelector(sDataTarget);
+          // console.log(sDataPlan);
+          continentMap.style.backgroundImage = `url('./image/continent/${continentId}.svg')`;
+
+          continentBtns.forEach(cont => {
+            cont.classList.toggle('active', cont.getAttribute('id') === continentId);
+          });
+
+          countrySection.forEach(c => {
+            c.hidden = (c.getAttribute('data-continent') !== continentId);
+          });
+
+
+
+          citeTabBtns.forEach(cBtn => {
+            let cPlanTarget = cBtn.getAttribute('data-target');
+            let cPlanSection = document.querySelector(cPlanTarget);
+            if (cPlanSection) {
+              cPlanSection.setAttribute('hidden', true);
+            }
+          })
+
+          const citiesArray = Array.from(citiesSection);
+          const matchingCity = citiesArray.find(city => {
+            const cityId = '#' + city.getAttribute('id');
+            return cityId === sDataTarget;
+          });
+          // console.log(matchingCity);
+
+
+
+
+          if (matchingCity != undefined) {
+            citiesSection.forEach(city => {
+              const cityId = '#' + city.getAttribute('id');
+              if (cityId === sDataTarget) {
+
+                const cityTabBtns = city.querySelectorAll('.e-tab_btn');
+                citeTabBtns.forEach(ceTab => ceTab.classList.remove('active'));
+                cityTabBtns[0].classList.add('active');
+                const cPlanTarget = cityTabBtns[0].getAttribute('data-target');
+                document.querySelector(cPlanTarget).removeAttribute('hidden');
+
+
+
+                cityTabBtns.forEach(cBtn => {
+                  // console.log(cBtn);
+                  cBtn.addEventListener('click', function () {
+                    citeTabBtns.forEach(ceTab => ceTab.classList.remove(
+                      'active'));
+
+                    if (!cBtn.classList.contains('active')) {
+                      cBtn.classList.add('active');
+                    }
+
+                    const selectedCityTarget = cBtn.getAttribute('data-target');
+                    const selectedCityPlan = document.querySelector(selectedCityTarget);
+                    selectedCityPlan.removeAttribute('hidden');
+
+
+                    citeTabBtns.forEach(cTar => {
+                      if (cTar !== cBtn) {
+                        const cPlanTarget = cTar.getAttribute('data-target');
+                        const cPlanSection = document.querySelector(cPlanTarget);
+                        if (cPlanSection) {
+                          cPlanSection.setAttribute('hidden', true);
+                        }
+                      }
+                    })
+
+                  })
+
+                })
+
+              }
+
+            })
+
+          }
+          // else {
+
+          allTabsBtn.forEach(eTab => {
+            // console.log(eTab);
+            if (eTab.classList.contains('active')) {
+              eTab.classList.remove('active');
+            }
+
+            if (eTab.getAttribute('data-target') == link.getAttribute('data-target')) {
+
+              if (!eTab.classList.contains('active')) {
+                eTab.classList.add('active');
+
+                // Update the URL with the active button's data-target value
+                const url = new URL(window.location.href);
+                url.searchParams.set('activeTab', link.getAttribute('data-target').substr(1));
+                window.history.replaceState(null, null, url);
+              }
+
+            }
+
+            if (link !== eTab) {
+
+              let sPlanTarget = eTab.getAttribute('data-target');
+              let sPlanSection = document.querySelector(sPlanTarget);
+              if (sPlanSection) {
+                sPlanSection.setAttribute('hidden', true);
+              }
+            }
+
+
+          })
+
+          // console.log(sDataPlan);
+          if (sDataPlan.hasAttribute('hidden')) {
+            sDataPlan.removeAttribute('hidden');
+          }
+          // }
+
+
+
+
+        }
+      }
+
+
+      allTabsBtn.forEach(btn => {
+
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const contId = btn.parentElement.parentElement.parentElement.parentElement.getAttribute(
+            'data-continent');
+          const countryId = btn.getAttribute('data-target');
+
+          activeTab(btn, contId);
+
+          isNavigationActive(contId);
+
+        })
+      })
+
+
+
+
+
+      // Check if the swiper navigationBtn is active or not
+      function isNavigationActive(contID) {
+
+        countrySection.forEach(c => {
+
+          if (c.getAttribute('data-continent') == contID) {
+            // console.log(c);
+            const prevBtn = c.querySelector('.swiper-button-prev').classList.contains(
+              'swiper-button-disabled');
+            const nextBtn = c.querySelector('.swiper-button-next').classList.contains(
+              'swiper-button-disabled');
+            // console.log(prevBtn, nextBtn);
+            if (prevBtn && nextBtn) {
+              c.querySelector('.swiper-wrapper').style.justifyContent = 'center';
+            } else {
+              c.querySelector('.swiper-wrapper').style.justifyContent = 'initial';
+            }
+          }
+        });
+
+      }
+
+      // Example usage:
+      // if (isNavigationActive()) {
+      //   console.log('Navigation is active');
+      // } else {
+      //   console.log('Navigation is not active');
+      // }
+
+
+
+    })
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const continentBtns = document.querySelectorAll('.e-tab-continent .e-tab_btn');
+    //   const continentMap = document.querySelector('.continent-map');
+    //   const tabSec = document.querySelectorAll('.e-tab-countries .swiper-slide');
+    //   const allTabBtns = document.querySelectorAll('.e-tab-countries .swiper-slide .e-tab_btn');
+    //   // console.log(allTabBtns);
+
+    //         // Initialize Swiper with loop for country section
+    //         var mySwiper = new Swiper('.countrySwiper', {
+    //     // autoplay:{
+    //     //   delay:4000,
+    //     // },
+    //     slidesPerView: 8,
+    //     spaceBetween: 5,
+    //     loop: false,
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //     },
+
+    //     breakpoints: {
+    //       250: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 20,
+    //       },
+    //       576: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 20,
+    //       },
+    //       768: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 20,
+    //       },
+    //       1024: {
+    //         slidesPerView: 5,
+    //         spaceBetween: 20,
+    //       },
+    //       1200: {
+    //         slidesPerView: 6,
+    //         spaceBetween: 20,
+    //       },
+    //       1400: {
+    //         slidesPerView: 7,
+    //         spaceBetween: 20,
+    //       },
+    //     },
+    //   });
+
+    //   // --- set default map background 
+    //   continentBtns.forEach(cont => {
+    //     if (cont.classList.contains('active')) {
+    //       const continentId = cont.getAttribute('id');
+    //       continentMap.style.backgroundImage = `url('./image/continent/${continentId}.svg')`;
+
+    //       tabSec.forEach(btn => {
+    //         let cTarget = btn.getAttribute('data-continent');
+
+
+    //         if (continentId === cTarget) {
+    //           btn.removeAttribute('hidden');
+    //           mySwiper.update();
+    //         } else {
+    //           btn.setAttribute('hidden', true);
+    //           mySwiper.update();
+    //         }
+    //       })
+
+
+    //     }
+    //   })
+    //   // --- to click continent btn ----
+    //   continentBtns.forEach((continentBtn) => {
+    //     continentBtn.addEventListener('click', function (e) {
+    //       let continentId = this.getAttribute('id');
+    //       continentBtns.forEach(btn => btn.classList.remove('active'));
+    //       if (!this.classList.contains('active')) {
+    //         this.classList.add('active');
+    //       }
+
+    //       // --- set map background 
+
+    //       continentMap.style.backgroundImage = `url('./image/continent/${continentId}.svg')`;
+    //       // console.log(continentId);
+
+    //       // --- set countries depending on continent
+    //       // console.log(tabSec);
+    //       tabSec.forEach(btn => {
+    //         let cTarget = btn.getAttribute('data-continent');
+
+
+    //         if (continentId === cTarget) {
+    //           btn.removeAttribute('hidden');
+    //         } else {
+    //           btn.setAttribute('hidden', true);
+    //         }
+    //       })
+    //     })
+    //   })
+
+
+    //   allTabBtns.forEach(btn => {
+
+    //     btn.addEventListener('click', function (e) {
+    //       e.preventDefault();
+    //       allTabBtns.forEach(btn => btn.classList.remove('active'));
+    //       if (!this.classList.contains('active')) {
+    //         this.classList.add('active');
+    //       }
+
+    //     })
+    //   })
+
+
+    //   console.log(window.location);
+    //   console.log(document.location);
+
+    // // })
+    //    // window.onload event
+    //    window.onload = function() {
+    //     console.log('window.onload: Entire page has loaded, including all resources.');
+    // };
+
+    // // document.onload event
+    // document.onload = function() {
+    //     console.log('document.onload: DOM content has finished loading.');
+    // };
+
+    // // document.addEventListener for DOMContentLoaded event
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     console.log('DOMContentLoaded: DOM content has finished loading (alternative)');
+    // });
+  </script>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+  <script src="swiper2/swiper-bundle.min.js"></script>
+  <!-- <script src="swiper/swiper.min.js"></script> -->
+
+
+  <script>
+    // $(document).ready(function () {
+    //   if ($('.plans-card').has('.product-plan-5').length > 0) {
+    //     console.log('asdasd');
+    //     $('.plans-continent').css('display', 'block');
+    //   }
+    // });
+  </script>
+
+</body>
+
+
+</html>

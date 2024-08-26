@@ -1,0 +1,17 @@
+.server-setup{
+  .hero-sec{
+    background-color: #ffeaf7;
+
+    .hero-sec__waves path{
+      fill: #ffeaf7 ;
+    }
+  }
+
+  .product-plan-2 .plan{
+    background-color: transparent;
+    border-color: #ffb8f3;
+  }
+  .plan__order-btn .btn-main{
+    background:#ffb8f3 !important;
+  }
+}

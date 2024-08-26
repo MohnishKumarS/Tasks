@@ -1,0 +1,38 @@
+{
+    "products":[
+        {
+            "name" : "products",
+            "img" : "p3.jpg"
+        },
+        {
+            "name" : "products",
+            "img" : "p4.jpg"
+        },
+        {
+            "name" : "Fashion",
+            "img" : "p5.png"
+        },
+        {
+            "name" : "products",
+            "img" : "p6.jpg"
+        },
+        {
+            "name" : "products",
+            "img" : "p7.png"
+        },
+        {
+            "name" : "products",
+            "img" : "p8.jpg"
+        }, 
+        
+        {
+            "name" : "products",
+            "img" : "p1.webp"
+        },
+        {
+            "name" : "Fashion",
+            "img" : "p2.webp"
+        }
+
+    ]
+}

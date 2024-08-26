@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+<style>
+  #india .plan {
+    /* border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-radius: 50px !important; */
+    background-clip: padding-box;
+  }
+
+  #india .plan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    /* background: linear-gradient(to right, red, orange); */
+  }
+
+  /* --- india */
+  .india .plan .plan__img .plan__img-icon {
+    filter: invert(33%) sepia(59%) saturate(1270%) hue-rotate(80deg) brightness(98%) contrast(98%);
+
+  }
+
+  .india .plan__order-btn .btn-call-to {
+    background: #009245 !important;
+    box-shadow: 0 1px 10px #009245;
+  }
+
+  /* ---germany  */
+  .germany .plan .plan__img .plan__img-icon {
+    filter: hue-rotate(48deg);
+    filter: invert(10%) sepia(87%) saturate(6653%) hue-rotate(1deg) brightness(88%) contrast(112%);
+  }
+
+  .germany .plan__order-btn .btn-call-to {
+    background: #d60127 !important;
+    box-shadow: 0 1px 10px #d60127;
+  }
+
+  /* --- usa  */
+  .usa .plan .plan__img .plan__img-icon {
+    /* filter: hue-rotate(218deg); */
+    filter: invert(34%) sepia(97%) saturate(5610%) hue-rotate(336deg) brightness(77%) contrast(126%);
+  }
+
+  .usa .plan__order-btn .btn-call-to {
+    background: #bb133e !important;
+    box-shadow: 0 1px 10px #bb133e;
+  }
+
+  /* --- swiss  */
+  .swiss .plan .plan__img .plan__img-icon {
+    /* filter: hue-rotate(4deg); */
+    filter: invert(34%) sepia(97%) saturate(5610%) hue-rotate(336deg) brightness(77%) contrast(126%);
+  }
+
+  .swiss .plan__order-btn .btn-call-to {
+    background: #fff !important;
+    box-shadow: 0 1px 16px #00000027;
+    color: #454d54;
+  }
+
+  /* --- finland  */
+  .finland .plan .plan__img .plan__img-icon {
+    /* filter: hue-rotate(214deg);
+     */
+    filter: invert(11%) sepia(64%) saturate(3426%) hue-rotate(203deg) brightness(96%) contrast(102%);
+  }
+
+  .finland .plan__order-btn .btn-call-to {
+    background: #fff !important;
+    box-shadow: 0 1px 16px #00000031;
+    color: #454d54;
+  }
+
+
+  .preview-loading-spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .preview-loading-spinner svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  #head {
+    color: #bb133e;
+  }
+
+  .header {
+    color: blue;
+  }
+</style>
+
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      document.querySelector('.preview-loading-spinner').style.display = 'none';
+    }, 700)
+  }
+</script>
+
+<body>
+  <div class="container">
+    <div class="faQ__accordion">
+      <div class="faQ__accordion-item">
+        <div class="faQ__accordion-header">Section 1</div>
+        <div class="faQ__accordion-content">Content for Section 1</div>
+      </div>
+      <div class="faQ__accordion-item">
+        <div class="faQ__accordion-header">Section 2</div>
+        <div class="faQ__accordion-content">Content for Section 2 <br>
+          <ul>
+            <li>
+            <b>Webmail:</b> Access your emails conveniently through a web-based
+            interface from any device.
+            </li>
+            <li>
+            <b>IMAP Sync:</b> Synchronize your emails across multiple devices,
+            ensuring consistent access to your messages.
+            </li>
+            <li>
+            <b>5 GB Disk Space:</b> Store your emails and attachments with ample
+            storage space.
+            </li>
+            <li>
+            <b>POP &amp; IMAP Access:</b> Set up your email account on various email
+            clients and devices using POP or IMAP protocols.
+            </li>
+            <li>
+            <b>Branded SSL Certificates:</b> Encrypt your email communication
+            with SSL certificates, displaying your brand's identity and
+            enhancing security.
+            </li>
+            <li>
+            <b>TLS Support:</b> Enable secure email transmission using Transport
+            Layer Security (TLS) encryption.
+            </li>
+            <li>
+            <b>Cloudmark Email Protection:</b> Protect your inbox from spam,
+            viruses, and phishing attempts with Cloudmark's advanced filtering
+            technology.
+            </li>
+            <li>
+            <b>Calendar:</b> Manage your schedules, appointments, and events
+            using a built-in calendar feature.
+            </li>
+            <li>
+            <b>Custom Themes:</b> Personalize your email experience with custom
+            themes and branding options.
+            </li>
+            </ul>
+        </div>
+      </div>
+      <div class="faQ__accordion-item">
+        <div class="faQ__accordion-header">Section 3</div>
+        <div class="faQ__accordion-content">Assuming you created a website, you need two things to make it available to
+          everyone on the internet. They are the domain name and web hosting.
+
+          A domain name is an address through which a user can access your website. Web hosting is a service that hosts
+          all your website data like web pages, images, videos, and so on.</div>
+      </div>
+      <div class="faQ__accordion-item">
+        <div class="faQ__accordion-header">Section 4</div>
+        <div class="faQ__accordion-content">At eWallHost, we accept the following payment options.
+
+          We use ccAvenue for processing payments via debit cards and credit cards (only in India).
+          International users can make payments using PayPal.
+          We also accept Bank Transfer and Skrill transfer. This option will take extra time for verification.
+          International users can also use BitCoin for payment. <br><br>
+          Do not settle with a personalized email ID that just goes by your name, rather choose the one that offers you some essential features. With Ewallhost, never be forgotten by anyone who looks for you, get an email that suits you better and create your own internet identity.
+        </div>
+      </div>
+      <!-- Add more sections as needed -->
+    </div>
+  </div>
+  <style>
+    .faQ__accordion {
+      width: 900px;
+      margin: 50px 0;
+
+      & .faQ__accordion-item {
+        padding: 20px 20px 10px ;
+        margin-bottom: 25px;
+        border: 1px solid rgb(228, 228, 228);
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.086);
+        transition: 0.5s all;
+
+        & .faQ__accordion-header{
+          font-size: 1rem;
+          font-weight: 700;
+          color: #333;
+        }
+
+        & .faQ__accordion-header::after{
+          content: '\002B';
+          font-size: 18px;
+          float: right;
+          font-weight: bold;
+          width: 30px;
+          height: 30px;
+          border: 1px solid rgb(189, 189, 189);
+          border-radius: 50%;
+          text-align: center;
+
+        }
+
+        &.active .faQ__accordion-header::after{
+          content: '-';
+        }
+
+        &:hover {
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.196);
+        }
+
+        & .faQ__accordion-content {
+          padding: 10px 0 0 10px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+
+      
+
+       
+      }
+
+      @media only screen and (max-width:992px){
+        & {
+          width: 100%;
+        }
+      }
+    }
+  </style>
+  <script>
+    const accordian = document.querySelectorAll('.faQ__accordion-item');
+    console.log(accordian);
+
+    accordian.forEach(function (accord) {
+      accord.addEventListener('click', function (item) {
+        this.classList.toggle('active')
+        const content = accord.querySelector('.faQ__accordion-content');
+        console.log(content.scrollHeight);
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+
+      })
+    })
+
+
+    //   function toggleAccordion(index) {
+    //   // Get all accordion items
+    //   const items = document.querySelectorAll('.accordion-item');
+
+    //   // Toggle the content of the clicked accordion item
+    //   const content = items[index].querySelector('.accordion-content');
+    //   content.style.display = content.style.display === 'none' ? 'block' : 'none';
+
+    //   // Close other accordion items if they are open
+    //   items.forEach((item, i) => {
+    //     if (i !== index) {
+    //       item.querySelector('.accordion-content').style.display = 'none';
+    //     }
+    //   });
+    // }
+    // function toggleAccordion(index) {
+    //   // Get all accordion items
+    //   const items = document.querySelectorAll('.accordion-item');
+
+    //   // Toggle the content of the clicked accordion item
+    //   const content = items[index].querySelector('.accordion-content');
+    //   if (content.style.maxHeight) {
+    //     content.style.maxHeight = null;
+    //   } else {
+    //     // Close other accordion items if they are open
+    //     items.forEach((item, i) => {
+    //       if (i !== index) {
+    //         const otherContent = item.querySelector('.accordion-content');
+    //         otherContent.style.maxHeight = null;
+    //       }
+    //     });
+    //     content.style.maxHeight = content.scrollHeight + 'px';
+    //   }
+    // }
+  </script>
+  <!-- <img src="newtab.html" alt=""> -->
+  <a href="../javascript/index.html">external link</a>
+
+  <a href="https://www.google.com/" target="_blank">external link </a>
+  <a href="">Internal link</a>
+  <small>1</small>
+  <small>2</small>
+  <small>3</small>
+  <small>4</small>
+
+  <footer></footer>
+  <h1 class="header" id="head">Hello world</h1>
+  <h1 class="header" id="head" style="color: green;">Hello world</h1>
+  <h1 class="header" id="head">Hello world</h1>
+  <h1 class="header" id="head2">Hello world</h1>
+  <div class="row">
+    <div class="col-lg-4 position-relative">
+      <img src="singapore.svg" alt="" class="">
+      <div class="preview-loading-spinner preview-loading-spinner-centered">
+        <svg version="1.1" id="preview-loading-spinner-1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50"
+          style="enable-background: new 0 0 50 50" xml:space="preserve">
+          <path fill="#000"
+            d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25"
+              dur="0.65s" repeatCount="indefinite" />
+          </path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- product plans 5 -->
+  <section class="india" id="finland">
+    <section class="product-plans-5">
+      <div class="container">
+        <div class="product-plans-5__title">India Server Plans</div>
+        <div class="product-plans-5__items plans js-product-plans">
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-1">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+
+                <path
+                  d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                  opacity=".25" class="shape-fill"></path>
+                <path
+                  d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                  opacity=".5" class="shape-fill"></path>
+                <path
+                  d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+
+              <img src="../image/icons/vps 1.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-2">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 5.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-3">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                  d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                  opacity=".25" class="shape-fill"></path>
+                <path
+                  d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                  opacity=".5" class="shape-fill"></path>
+                <path
+                  d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 2.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-4">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 3.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-5">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 4.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-6">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                  d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 6.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-7">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 7.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+          <div class="product-plans-5__item plan">
+            <div class="plane__shape shape-divider-8">
+              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"
+                  class="shape-fill"></path>
+              </svg>
+            </div>
+            <div class="plan__img plan__item">
+              <img src="../image/icons/vps 8.svg" class="plan__img-icon" width="150" height="150" alt="">
+            </div>
+            <div class="plan__name">pricing plan</div>
+            <div class="plan__desc">
+              <div class="plan__amount">
+                <div class="plan__month">Save 10% on 1st month</div>
+                <div class="plan__price">
+                  <span class="plan__curr">₹</span><span>9099</span>
+                </div>
+                <div class="plan__bill-cycle">/month</div>
+              </div>
+
+              <div class="plan__spec">
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/core.svg" alt="core" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2 / core</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/ram.svg" alt="ram" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">4 GB / Ram</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/cpu.svg" alt="cpu" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">2.4 Ghz / cpu</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/disk.svg" alt="diskspace" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">30GB / Diskspace</span>
+                </div>
+                <div class="plan__spec-item">
+                  <span class="plan__spec-icon"><img src="../image/server/band.svg" alt="bandwidth" width="150px"
+                      height="150px" /></span>
+                  <span class="plan__spec-txt">1TB / Bandwidth</span>
+                </div>
+              </div>
+            </div>
+            <div class="plan__order-btn">
+              <button class="btn-call-to">order now</button>
+            </div>
+            <div class="plan__renew">Renews at 9099/month</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- product plans 5END -->
+
+  <style>
+    :root {
+      --color: #fc4d6c;
+      --color-white: #fff;
+      --color-danger: #fc4d6c;
+    }
+
+    body {
+      background-color: rgb(255, 255, 255);
+      color: #454d54;
+    }
+
+    .product-plans-5 {
+      padding-bottom: 100px;
+    }
+
+    .product-plans-5__title {
+      font-size: 40px;
+      font-weight: 600;
+      -webkit-text-stroke: 1px rgb(0, 0, 0);
+      color: #fff;
+      text-align: center;
+      margin: 100px 0 30px 0;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 30px;
+      row-gap: 50px;
+    }
+
+    .plan {
+      position: relative;
+      flex: 1 1;
+      min-width: 310px;
+      max-width: 360px;
+      background: #fff;
+      /* margin-right: 30px; */
+      padding: 35px 8px 20px;
+      border-radius: 30px;
+      border: 1px solid rgba(252, 79, 111, 0.404);
+      /* text-align: center; */
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .plan:hover {
+      box-shadow: 0 0 10px 2px #ff254d18;
+    }
+
+    /* .plan::before{
+            content: '';
+            display: inline-block;
+            height: 250px;
+            width: 250px;
+            border-radius: 50% ;
+            background-color: #ffc8d265;
+            position: absolute;
+            top: -35%;
+            left: -29%;
+            z-index: -1;
+            overflow: hidden;
+
+        } */
+    .plan__img {
+      width: 100px;
+      height: auto;
+      margin: auto;
+      text-align: center;
+    }
+
+    .plan__img img {
+      width: 100px;
+      height: auto;
+    }
+
+    .plan__name {
+      font-size: 20px;
+      padding: 18px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .plan__desc {
+      display: flex;
+      margin-bottom: 18px;
+    }
+
+    .plan__amount {
+      flex: 1 1;
+      border-right: 1px solid #454d54;
+      padding-right: 10px;
+      text-align: center;
+    }
+
+    .plan__amount .plan__month {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fc4d6c;
+    }
+
+    .plan__amount .plan__bill-cycle {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .plan__amount .plan__price {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .plan__amount .plan__price .plan__curr {
+      font-size: 2.2rem;
+      font-weight: 600;
+      vertical-align: text-top;
+    }
+
+    .plan__spec {
+      flex: 1 1;
+      margin-left: 16px;
+    }
+
+    .plan__spec .plan__spec-item {
+      margin-bottom: 10px;
+    }
+
+    .plan__spec-icon img {
+      width: 18px;
+      height: auto;
+    }
+
+    .plan__spec-txt {
+      font-size: 14px;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    .plan__order-btn {
+      text-align: center;
+    }
+
+    .plan__order-btn .btn-call-to {
+      font-weight: 600;
+      font-size: 17px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 10px #fc4d6dc9;
+    }
+
+    .plan__renew {
+      font-size: 14px;
+      font-weight: 600;
+      padding-top: 8px;
+      text-align: center;
+    }
+
+    .shape-divider-1 {
+      position: absolute;
+      top: -5%;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .shape-divider-1 svg {
+      position: relative;
+      display: block;
+      width: calc(177% + 1.3px);
+      height: 120px;
+      transform: rotateY(180deg);
+    }
+
+
+    .shape-divider-2 {
+      position: absolute;
+      top: -7%;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    .shape-divider-2 svg {
+      position: relative;
+      display: block;
+      width: calc(223% + 1.3px);
+      height: 150px;
+      transform: rotateY(180deg);
+    }
+
+    .shape-divider-3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .shape-divider-3 svg {
+      position: relative;
+      display: block;
+      width: calc(300% + 1.3px);
+      height: 70px;
+    }
+
+
+
+    .shape-divider-4 {
+      position: absolute;
+      top: -7%;
+      left: -3%;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(90deg);
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .shape-divider-4 svg {
+      position: relative;
+      display: block;
+      width: calc(197% + 1.3px);
+      height: 413px;
+    }
+
+
+
+    .shape-divider-5 {
+      position: absolute;
+      top: -70px;
+      left: 2px;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .shape-divider-5 svg {
+      position: relative;
+      display: block;
+      width: calc(204% + 1.3px);
+      height: 195px;
+    }
+
+
+
+    .shape-divider-6 {
+      position: absolute;
+      top: -7%;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .shape-divider-6 svg {
+      position: relative;
+      display: block;
+      width: calc(266% + 1.3px);
+      height: 163px;
+    }
+
+
+
+
+    .shape-divider-7 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .shape-divider-7 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 65px;
+    }
+
+    .shape-divider-8 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    .shape-divider-8 svg {
+      position: relative;
+      display: block;
+      width: calc(165% + 1.3px);
+      height: 212px;
+    }
+
+    .plane__shape .shape-fill {
+      fill: #ffb9b9;
+    }
+
+    .btn-call-to {
+      display: inline-block;
+      padding: 8px 20px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: var(--font-montserrat);
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      color: var(--color-white);
+      background: var(--color-danger);
+      border: none;
+      border-radius: 5px;
+    }
+
+    .btn-call-to:hover,
+    .btn-call-to:active,
+    .btn-call-to:focus,
+    .btn-call-to:visited {
+      box-shadow: inset 500px 0 0 rgba(0, 0, 0, 0.25);
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    .btn-call-to:hover {
+      cursor: pointer;
+    }
+  </style>
+</body>
+
+</html>
